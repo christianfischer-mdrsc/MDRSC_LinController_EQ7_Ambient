@@ -1,0 +1,212 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                         Melexis Technologies                               */
+/*                         All rights reserved                                */
+/*                                                                            */
+/* ************************************************************************** */
+/*                                                                            */
+/*  Project:       MLX81118 LIN 2.2 PWM CLIB Example                          */
+/*  Description:   LIN Description file                                       */
+/*  Company:       Melexis                                                    */
+/*  Version:       V1.1                                                       */
+/*  Date:          06.01.2023                                                 */
+/*                                                                            */
+/* ************************************************************************** */
+
+LIN_description_file;
+LIN_protocol_version = "2.2";
+LIN_language_version = "2.2";
+LIN_speed = 19.200 kbps;
+
+/* -------------------------------------------------------------------------- */
+Nodes
+{
+    Master: Master_Node, 5 ms, 0.100 ms;
+    Slaves: MLX_Node;
+}
+
+/* -------------------------------------------------------------------------- */
+Signals
+{
+    /* MSG_LED_Control Frame */
+    BCM_1_RGB_Slave_Adresse:          15, 1, Master_Node, MLX_Node;
+	BCM_1_RGB_Adressierungsart:       1, 0, Master_Node, MLX_Node;
+	BCM_1_RGB_Rot:                    8, 0, Master_Node, MLX_Node;
+	BCM_1_RGB_Gruen:                  8, 255, Master_Node, MLX_Node;
+	BCM_1_RGB_Blau:                   8, 0, Master_Node, MLX_Node;
+	BCM_1_RGB_Intensitaet:            7, 100, Master_Node, MLX_Node;
+	BCM_1_RGB_Normierung_Intensitaet: 1, 0, Master_Node, MLX_Node;
+	BCM_1_RGB_Dimmrampe:              4, 0, Master_Node, MLX_Node;
+	BCM_1_RGB_Sonderfunktion:         3, 0, Master_Node, MLX_Node;
+	BCM_1_RGB_Bewertung_Dimmzeit:     1, 0, Master_Node, MLX_Node;
+	BCM_1_RGB_Gueltigkeit:            1, 1, Master_Node, MLX_Node;
+	BCM_1_RGB_Dimmzeit_Zeitbasis:     1, 0, Master_Node, MLX_Node;
+
+    /* MSG_LED_Control Frame */
+    BCM_2_RGB_Slave_Adresse:          15, 2, Master_Node, MLX_Node;
+	BCM_2_RGB_Adressierungsart:       1, 0, Master_Node, MLX_Node;
+	BCM_2_RGB_Rot:                    8, 255, Master_Node, MLX_Node;
+	BCM_2_RGB_Gruen:                  8, 0, Master_Node, MLX_Node;
+	BCM_2_RGB_Blau:                   8, 0, Master_Node, MLX_Node;
+	BCM_2_RGB_Intensitaet:            7, 100, Master_Node, MLX_Node;
+	BCM_2_RGB_Normierung_Intensitaet: 1, 0, Master_Node, MLX_Node;
+	BCM_2_RGB_Dimmrampe:              4, 0, Master_Node, MLX_Node;
+	BCM_2_RGB_Sonderfunktion:         3, 0, Master_Node, MLX_Node;
+	BCM_2_RGB_Bewertung_Dimmzeit:     1, 0, Master_Node, MLX_Node;
+	BCM_2_RGB_Gueltigkeit:            1, 1, Master_Node, MLX_Node;
+	BCM_2_RGB_Dimmzeit_Zeitbasis:     1, 0, Master_Node, MLX_Node;
+
+    /* MSG_LED_Control Frame */
+    BCM_3_RGB_Slave_Adresse:          15, 3, Master_Node, MLX_Node;
+	BCM_3_RGB_Adressierungsart:       1, 0, Master_Node, MLX_Node;
+	BCM_3_RGB_Rot:                    8, 175, Master_Node, MLX_Node;
+	BCM_3_RGB_Gruen:                  8, 255, Master_Node, MLX_Node;
+	BCM_3_RGB_Blau:                   8, 64, Master_Node, MLX_Node;
+	BCM_3_RGB_Intensitaet:            7, 100, Master_Node, MLX_Node;
+	BCM_3_RGB_Normierung_Intensitaet: 1, 0, Master_Node, MLX_Node;
+	BCM_3_RGB_Dimmrampe:              4, 0, Master_Node, MLX_Node;
+	BCM_3_RGB_Sonderfunktion:         3, 0, Master_Node, MLX_Node;
+	BCM_3_RGB_Bewertung_Dimmzeit:     1, 0, Master_Node, MLX_Node;
+	BCM_3_RGB_Gueltigkeit:            1, 1, Master_Node, MLX_Node;
+	BCM_3_RGB_Dimmzeit_Zeitbasis:     1, 0, Master_Node, MLX_Node;
+}
+/* -------------------------------------------------------------------------- */
+Diagnostic_signals
+{
+    MasterReqB0: 8, 0;
+    MasterReqB1: 8, 0;
+    MasterReqB2: 8, 0;
+    MasterReqB3: 8, 0;
+    MasterReqB4: 8, 0;
+    MasterReqB5: 8, 0;
+    MasterReqB6: 8, 0;
+    MasterReqB7: 8, 0;
+    SlaveRespB0: 8, 0;
+    SlaveRespB1: 8, 0;
+    SlaveRespB2: 8, 0;
+    SlaveRespB3: 8, 0;
+    SlaveRespB4: 8, 0;
+    SlaveRespB5: 8, 0;
+    SlaveRespB6: 8, 0;
+    SlaveRespB7: 8, 0;
+}
+
+/* -------------------------------------------------------------------------- */
+Frames
+{
+   MSG_1_LED_Control : 0x15, Master_Node ,8 {
+    	BCM_1_RGB_Slave_Adresse, 0;
+		BCM_1_RGB_Adressierungsart, 15;
+		BCM_1_RGB_Rot, 16;
+		BCM_1_RGB_Gruen, 24;
+		BCM_1_RGB_Blau, 32;
+		BCM_1_RGB_Intensitaet, 40;
+		BCM_1_RGB_Normierung_Intensitaet, 47;
+		BCM_1_RGB_Dimmrampe, 48;
+		BCM_1_RGB_Sonderfunktion, 53;
+		BCM_1_RGB_Bewertung_Dimmzeit, 56;
+		BCM_1_RGB_Gueltigkeit, 57;
+		BCM_1_RGB_Dimmzeit_Zeitbasis, 58;
+    }
+
+    MSG_2_LED_Control : 0x15, Master_Node ,8 {
+    	BCM_2_RGB_Slave_Adresse, 0;
+		BCM_2_RGB_Adressierungsart, 15;
+		BCM_2_RGB_Rot, 16;
+		BCM_2_RGB_Gruen, 24;
+		BCM_2_RGB_Blau, 32;
+		BCM_2_RGB_Intensitaet, 40;
+		BCM_2_RGB_Normierung_Intensitaet, 47;
+		BCM_2_RGB_Dimmrampe, 48;
+		BCM_2_RGB_Sonderfunktion, 53;
+		BCM_2_RGB_Bewertung_Dimmzeit, 56;
+		BCM_2_RGB_Gueltigkeit, 57;
+		BCM_2_RGB_Dimmzeit_Zeitbasis, 58;
+    }
+
+    MSG_3_LED_Control : 0x15, Master_Node ,8 {
+    	BCM_3_RGB_Slave_Adresse, 0;
+		BCM_3_RGB_Adressierungsart, 15;
+		BCM_3_RGB_Rot, 16;
+		BCM_3_RGB_Gruen, 24;
+		BCM_3_RGB_Blau, 32;
+		BCM_3_RGB_Intensitaet, 40;
+		BCM_3_RGB_Normierung_Intensitaet, 47;
+		BCM_3_RGB_Dimmrampe, 48;
+		BCM_3_RGB_Sonderfunktion, 53;
+		BCM_3_RGB_Bewertung_Dimmzeit, 56;
+		BCM_3_RGB_Gueltigkeit, 57;
+		BCM_3_RGB_Dimmzeit_Zeitbasis, 58;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+Diagnostic_frames
+{
+    MasterReq: 60
+    {
+        MasterReqB0, 0;
+        MasterReqB1, 8;
+        MasterReqB2, 16;
+        MasterReqB3, 24;
+        MasterReqB4, 32;
+        MasterReqB5, 40;
+        MasterReqB6, 48;
+        MasterReqB7, 56;
+    }
+    SlaveResp: 61
+    {
+        SlaveRespB0, 0;
+        SlaveRespB1, 8;
+        SlaveRespB2, 16;
+        SlaveRespB3, 24;
+        SlaveRespB4, 32;
+        SlaveRespB5, 40;
+        SlaveRespB6, 48;
+        SlaveRespB7, 56;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+Node_attributes
+{
+    MLX_Node
+    {
+        LIN_protocol = "2.2";
+        configured_NAD = 0x01;
+        initial_NAD = 18;                           /* use last 2 numbers of chip name */
+        product_id = 0x0013, 0x0211, 0x05;          /* <supplier_id>, <function_id> (, <variant>) */
+        response_error = ACS_Slave_Response_Error;
+        P2_min = 50 ms;
+        ST_min = 20 ms;
+        N_As_timeout = 1000 ms;
+        N_Cr_timeout = 1000 ms;
+        configurable_frames
+        {
+           	MSG_1_LED_Control;
+			MSG_2_LED_Control;
+            MSG_3_LED_Control;
+        }
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+Schedule_tables
+{
+    Normal_Schedule
+    {
+        MSG_1_LED_Control                    	delay 20.000 ms;
+        MSG_2_LED_Control        				delay 20.000 ms;
+        MSG_3_LED_Control        				delay 20.000 ms;
+    }
+
+    DiagMRF_Schedule
+    {
+        MasterReq                       delay 20.000 ms;
+    }
+
+    DiagSRF_Schedule
+    {
+        SlaveResp                       delay 20.000 ms;
+    }
+}

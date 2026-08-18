@@ -1,0 +1,38 @@
+/*
+ * Auto-generated LIN signal header
+ * Created by your tool
+ */
+
+#ifndef LIN_SIGNALS_H
+#define LIN_SIGNALS_H
+
+#include <stdint.h>
+#include "ldf_typedefs.h"
+
+typedef struct LinFrame{
+    uint8_t u8_idField;
+    uint8_t u8_dataptr[8];
+    uint8_t u8_checkSum;
+    FrameNames fn_frameIndex;
+    void(*callback)(struct LinFrame* self);
+}LinFrame_t;
+
+typedef struct LinSignalParameter{
+    uint16_t data;
+    uint8_t length;
+    uint8_t offset;
+    Nodes publisher;
+}LinSignalParameter_t;
+
+typedef struct LinScheduleTable{
+    FrameNames frameOrder;
+    LinFrame_t linFrame;
+    uint16_t delay_ms;
+    bool sent;
+}LinScheduleTable_t;
+
+typedef struct LinScheduleTableDiag{
+    DiagnosticFrameNames frameOrder;
+    uint8_t delay_ms;
+}LinScheduleTableDiag_t;
+

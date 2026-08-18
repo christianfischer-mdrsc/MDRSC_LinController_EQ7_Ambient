@@ -1,0 +1,728 @@
+{
+    "header": "lin_description_file",
+    "protocol_version": "2.0",
+    "language_version": "2.0",
+    "speed": 19200,
+    "nodes": {
+        "master": {
+            "name": "ESP32_Master",
+            "timebase": 0.01,
+            "jitter": 0.0009000000000000001,
+            "max_header_length": null,
+            "response_tolerance": null
+        },
+        "slaves": [
+            "JOHNSON_Slave"
+        ]
+    },
+    "signals": [
+        {
+            "name": "ACT_Master_NAD",
+            "width": 8,
+            "init_value": 10,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Save_Prog",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Release_Block",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Clear_Flags",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Coil_Holding",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Select_Position",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Speed",
+            "width": 4,
+            "init_value": 3,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Desired_Position",
+            "width": 16,
+            "init_value": 0,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Start_Position",
+            "width": 16,
+            "init_value": 1023,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Emergency_Release",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Emergency_Position",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Direction",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Master_Stop_Mode",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "ESP32_Master",
+            "subscribers": [
+                "JOHNSON_Slave"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Response_Error",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Overtemperature",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Electronic_Defect",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Suppy_Voltage",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Emergency_Run",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Release_Block",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Block_Detected",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Reset",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Coil_Holding",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Position_Status",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Speed_Status",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Actual_Position",
+            "width": 16,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Traverse",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Holding_Torque",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Special_Function",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_NAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Emergency_Release",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Emergency_Position",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Direction",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Stop_Mode",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        },
+        {
+            "name": "ACT_Slave_Test_Signal",
+            "width": 8,
+            "init_value": 12,
+            "publisher": "JOHNSON_Slave",
+            "subscribers": [
+                "ESP32_Master"
+            ]
+        }
+    ],
+    "diagnostic_signals": [
+        {
+            "name": "MasterReqB0",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "MasterReqB1",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "MasterReqB2",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "MasterReqB3",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "MasterReqB4",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "MasterReqB5",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "MasterReqB6",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "MasterReqB7",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "SlaveRespB0",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "SlaveRespB1",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "SlaveRespB2",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "SlaveRespB3",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "SlaveRespB4",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "SlaveRespB5",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "SlaveRespB6",
+            "width": 8,
+            "init_value": 0
+        },
+        {
+            "name": "SlaveRespB7",
+            "width": 8,
+            "init_value": 0
+        }
+    ],
+    "frames": [
+        {
+            "name": "ACT_Master_Control",
+            "frame_id": 18,
+            "publisher": "ESP32_Master",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "ACT_Master_NAD",
+                    "offset": 0
+                },
+                {
+                    "signal": "ACT_Master_Save_Prog",
+                    "offset": 8
+                },
+                {
+                    "signal": "ACT_Master_Release_Block",
+                    "offset": 10
+                },
+                {
+                    "signal": "ACT_Master_Clear_Flags",
+                    "offset": 12
+                },
+                {
+                    "signal": "ACT_Master_Coil_Holding",
+                    "offset": 16
+                },
+                {
+                    "signal": "ACT_Master_Select_Position",
+                    "offset": 18
+                },
+                {
+                    "signal": "ACT_Master_Speed",
+                    "offset": 20
+                },
+                {
+                    "signal": "ACT_Master_Desired_Position",
+                    "offset": 24
+                },
+                {
+                    "signal": "ACT_Master_Start_Position",
+                    "offset": 40
+                },
+                {
+                    "signal": "ACT_Master_Emergency_Release",
+                    "offset": 56
+                },
+                {
+                    "signal": "ACT_Master_Emergency_Position",
+                    "offset": 58
+                },
+                {
+                    "signal": "ACT_Master_Direction",
+                    "offset": 60
+                },
+                {
+                    "signal": "ACT_Master_Stop_Mode",
+                    "offset": 62
+                }
+            ]
+        },
+        {
+            "name": "ACT_Slave_Status",
+            "frame_id": 32,
+            "publisher": "JOHNSON_Slave",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "ACT_Slave_Response_Error",
+                    "offset": 0
+                },
+                {
+                    "signal": "ACT_Slave_Overtemperature",
+                    "offset": 2
+                },
+                {
+                    "signal": "ACT_Slave_Electronic_Defect",
+                    "offset": 4
+                },
+                {
+                    "signal": "ACT_Slave_Suppy_Voltage",
+                    "offset": 6
+                },
+                {
+                    "signal": "ACT_Slave_Emergency_Run",
+                    "offset": 8
+                },
+                {
+                    "signal": "ACT_Slave_Release_Block",
+                    "offset": 10
+                },
+                {
+                    "signal": "ACT_Slave_Block_Detected",
+                    "offset": 12
+                },
+                {
+                    "signal": "ACT_Slave_Reset",
+                    "offset": 14
+                },
+                {
+                    "signal": "ACT_Slave_Coil_Holding",
+                    "offset": 16
+                },
+                {
+                    "signal": "ACT_Slave_Position_Status",
+                    "offset": 18
+                },
+                {
+                    "signal": "ACT_Slave_Speed_Status",
+                    "offset": 20
+                },
+                {
+                    "signal": "ACT_Slave_Actual_Position",
+                    "offset": 24
+                },
+                {
+                    "signal": "ACT_Slave_Traverse",
+                    "offset": 40
+                },
+                {
+                    "signal": "ACT_Slave_Holding_Torque",
+                    "offset": 42
+                },
+                {
+                    "signal": "ACT_Slave_Special_Function",
+                    "offset": 44
+                },
+                {
+                    "signal": "ACT_Slave_NAD",
+                    "offset": 48
+                },
+                {
+                    "signal": "ACT_Slave_Emergency_Release",
+                    "offset": 56
+                },
+                {
+                    "signal": "ACT_Slave_Emergency_Position",
+                    "offset": 58
+                },
+                {
+                    "signal": "ACT_Slave_Direction",
+                    "offset": 60
+                },
+                {
+                    "signal": "ACT_Slave_Stop_Mode",
+                    "offset": 62
+                }
+            ]
+        },
+        {
+            "name": "ACT_Slave_Status_2",
+            "frame_id": 33,
+            "publisher": "JOHNSON_Slave",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "ACT_Slave_Test_Signal",
+                    "offset": 0
+                }
+            ]
+        }
+    ],
+    "diagnostic_frames": [
+        {
+            "name": "MasterReq",
+            "frame_id": 60,
+            "signals": [
+                {
+                    "signal": "MasterReqB0",
+                    "offset": 0
+                },
+                {
+                    "signal": "MasterReqB1",
+                    "offset": 8
+                },
+                {
+                    "signal": "MasterReqB2",
+                    "offset": 16
+                },
+                {
+                    "signal": "MasterReqB3",
+                    "offset": 24
+                },
+                {
+                    "signal": "MasterReqB4",
+                    "offset": 32
+                },
+                {
+                    "signal": "MasterReqB5",
+                    "offset": 40
+                },
+                {
+                    "signal": "MasterReqB6",
+                    "offset": 48
+                },
+                {
+                    "signal": "MasterReqB7",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "SlaveResp",
+            "frame_id": 61,
+            "signals": [
+                {
+                    "signal": "SlaveRespB0",
+                    "offset": 0
+                },
+                {
+                    "signal": "SlaveRespB1",
+                    "offset": 8
+                },
+                {
+                    "signal": "SlaveRespB2",
+                    "offset": 16
+                },
+                {
+                    "signal": "SlaveRespB3",
+                    "offset": 24
+                },
+                {
+                    "signal": "SlaveRespB4",
+                    "offset": 32
+                },
+                {
+                    "signal": "SlaveRespB5",
+                    "offset": 40
+                },
+                {
+                    "signal": "SlaveRespB6",
+                    "offset": 48
+                },
+                {
+                    "signal": "SlaveRespB7",
+                    "offset": 56
+                }
+            ]
+        }
+    ],
+    "node_attributes": [
+        {
+            "name": "JOHNSON_Slave",
+            "lin_protocol": "2.0",
+            "configured_nad": 1,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "ACT_Slave_Response_Error",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "ACT_Master_Control": 16405,
+                "ACT_Slave_Status": 16385,
+                "ACT_Slave_Status_2": 16386
+            }
+        }
+    ],
+    "schedule_tables": [
+        {
+            "name": "FrameReq_Resp",
+            "schedule": [
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "ACT_Master_Control"
+                    },
+                    "delay": 0.05
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "ACT_Slave_Status"
+                    },
+                    "delay": 0.1
+                }
+            ]
+        },
+        {
+            "name": "DiagRequest",
+            "schedule": [
+                {
+                    "command": {
+                        "type": "master_request"
+                    },
+                    "delay": 0.01
+                }
+            ]
+        },
+        {
+            "name": "DiagResponse",
+            "schedule": [
+                {
+                    "command": {
+                        "type": "slave_response"
+                    },
+                    "delay": 0.01
+                }
+            ]
+        },
+        {
+            "name": "DiagBoth",
+            "schedule": [
+                {
+                    "command": {
+                        "type": "master_request"
+                    },
+                    "delay": 0.02
+                },
+                {
+                    "command": {
+                        "type": "slave_response"
+                    },
+                    "delay": 0.02
+                }
+            ]
+        }
+    ]
+}

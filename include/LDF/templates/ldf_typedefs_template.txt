@@ -1,0 +1,7 @@
+/*
+ * Auto-generated LIN signal header
+ * Created by your tool
+ */
+
+#ifndef LDF_TYPEDEFS_H
+#define LDF_TYPEDEFS_H
