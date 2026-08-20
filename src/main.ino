@@ -38,7 +38,7 @@
 /* ---------------------------------------------
  * Local Function Declarations
  * --------------------------------------------- */
-Scheduler scheduler(FrameReq_Resp_table, FRAMEREQ_RESP_FRAMESIZE);
+Scheduler scheduler(ST1_table, ST1_FRAMESIZE);
 ButtonHandler buttons;
 /* ---------------------------------------------
  * Class Konstruktors
@@ -64,6 +64,7 @@ void setup() {
   buttons.setButtonFeatures(4, FEATURE_SINGLE | FEATURE_LONG);
   buttons.setButtonFeatures(5, FEATURE_SINGLE);
   scheduler.initializeLin();
+
 }
 
 /*************************/
@@ -72,13 +73,14 @@ void setup() {
 
 void loop() {
   ReadSerialInput();
-  OperateButtons();
+  scheduler.ScheduleHandler();
   delay(10);
 }
 
 void ExternalTask(void* parameters){ 
   while(true){
-    scheduler.ScheduleHandler();  
+      
+    OperateButtons();
     vTaskDelay(10 / portTICK_PERIOD_MS);
   }
 }

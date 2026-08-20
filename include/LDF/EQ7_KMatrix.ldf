@@ -1,0 +1,1360 @@
+/* ***********************************************************************/
+/*                                                                       */
+/*  LIN DESCRIPTION FILE                                                 */
+/*                                                                       */
+/*  Date:          24.11.2025                                            */
+/*  Timestamp:     2025-11-24_23-21-24                                   */
+/*  Project:       E3_1_2_Ultra                                          */
+/*  Version:       V20.00.00.00A                                         */
+/*                                                                       */
+/*  Network:       HCP4_LIN28                                            */
+/*  Slave(s):      AM_RGB_Slave_01d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_02d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_03d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_04d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_05d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_06d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_07d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_08d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_09d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_10d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_11d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_12d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_13d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 AM_RGB_Slave_14d    Ambiente Licht Modul 1 bis n      */
+/*                                     (Maximal 15 Pro Bus)              */
+/*                 Virtual_AM_RGB_Slave_16d                              */
+/*  Master:        HCP4_uC1_1          Bordnetzsteuergerät / Body and    */
+/*                                     Energy                            */
+/*                                                                       */
+/*  Ersteller:     TX-XN CARIAD SE                                       */
+/*                                                                       */
+/* ***********************************************************************/
+/*                                                                       */
+/*  SYSTEMPARAMETER                                                      */
+/*                                                                       */
+/*  Spannungsversorgung:       HCP4_uC1_1          Kl.30                 */
+/*                             AM_RGB_Slave_01d    Kl.30                 */
+/*                             AM_RGB_Slave_02d    Kl.30                 */
+/*                             AM_RGB_Slave_03d    Kl.30                 */
+/*                             AM_RGB_Slave_04d    Kl.30                 */
+/*                             AM_RGB_Slave_05d    Kl.30                 */
+/*                             AM_RGB_Slave_06d    Kl.30                 */
+/*                             AM_RGB_Slave_07d    Kl.30                 */
+/*                             AM_RGB_Slave_08d    Kl.30                 */
+/*                             AM_RGB_Slave_09d    Kl.30                 */
+/*                             AM_RGB_Slave_10d    Kl.30                 */
+/*                             AM_RGB_Slave_11d    Kl.30                 */
+/*                             AM_RGB_Slave_12d    Kl.30                 */
+/*                             AM_RGB_Slave_13d    Kl.30                 */
+/*                             AM_RGB_Slave_14d    Kl.30                 */
+/*                             Virtual_AM_RGB_Slave_16d Kl.30            */
+/*                                                                       */
+/*  Sleep / WakeUp:            HCP4_uC1_1          Nein                  */
+/*                             AM_RGB_Slave_01d    Nein                  */
+/*                             AM_RGB_Slave_02d    Nein                  */
+/*                             AM_RGB_Slave_03d    Nein                  */
+/*                             AM_RGB_Slave_04d    Nein                  */
+/*                             AM_RGB_Slave_05d    Nein                  */
+/*                             AM_RGB_Slave_06d    Nein                  */
+/*                             AM_RGB_Slave_07d    Nein                  */
+/*                             AM_RGB_Slave_08d    Nein                  */
+/*                             AM_RGB_Slave_09d    Nein                  */
+/*                             AM_RGB_Slave_10d    Nein                  */
+/*                             AM_RGB_Slave_11d    Nein                  */
+/*                             AM_RGB_Slave_12d    Nein                  */
+/*                             AM_RGB_Slave_13d    Nein                  */
+/*                             AM_RGB_Slave_14d    Nein                  */
+/*                             Virtual_AM_RGB_Slave_16d Nein             */
+/*                                                                       */
+/*  Diagnoseklasse/Adresse:    HCP4_uC1_1          4     0x0009          */
+/*                             AM_RGB_Slave_01d    0                     */
+/*                             AM_RGB_Slave_02d    0                     */
+/*                             AM_RGB_Slave_03d    0                     */
+/*                             AM_RGB_Slave_04d    0                     */
+/*                             AM_RGB_Slave_05d    0                     */
+/*                             AM_RGB_Slave_06d    0                     */
+/*                             AM_RGB_Slave_07d    0                     */
+/*                             AM_RGB_Slave_08d    0                     */
+/*                             AM_RGB_Slave_09d    0                     */
+/*                             AM_RGB_Slave_10d    0                     */
+/*                             AM_RGB_Slave_11d    0                     */
+/*                             AM_RGB_Slave_12d    0                     */
+/*                             AM_RGB_Slave_13d    0                     */
+/*                             AM_RGB_Slave_14d    0                     */
+/*                             Virtual_AM_RGB_Slave_16d 0                */
+/*                                                                       */
+/*  ScheduleTable:             ST1                                       */
+/*                             SWrite                                    */
+/*                             Sync_All                                  */
+/*                             DiagRequest                               */
+/*                             DiagResponse                              */
+/*                                                                       */
+/* ***********************************************************************/
+/*                                                                       */
+/*  HINWEIS ZUR PRODUCT-ID:                                              */
+/*                                                                       */
+/*  Die "ProductID" fuer LIN 2.0 Slaves ist noch NICHT definiert.        */
+/*  Die derzeit verwendete bzw. im ldf eingetragene product_id ist NUR   */
+/*  als Default-Wert zur Vollständigkeit eingetragen. Die "ProductID"    */
+/*  muss eigenstaendig vom Lieferanten wie folgt angepasst zur           */
+/*  Verfuegung gestellt werden:                                          */
+/*                                                                       */
+/*  - "SupplierID" ist vom Lieferanten beim LIN Konsortium               */
+/*     zu organisieren                                                   */
+/*  - "FunctionID" ist vom Lieferanten zu verwalten                      */
+/*  - "VariantID" ist vom Lieferanten zu verwalten                       */
+/*                                                                       */
+/*  Bei jeder SW- und/oder HW-Aenderung ist die "ProductID" anzupassen!  */
+/*                                                                       */
+/* ***********************************************************************/
+LIN_description_file;
+LIN_protocol_version = "2.0";
+LIN_language_version = "2.0";
+LIN_speed = 19.2 kbps;
+Nodes {
+	Master: HCP4_uC1_1, 10 ms, 0.9 ms;
+	Slaves: AM_RGB_Slave_01d, AM_RGB_Slave_02d, AM_RGB_Slave_03d, AM_RGB_Slave_04d, AM_RGB_Slave_05d, AM_RGB_Slave_06d, AM_RGB_Slave_07d, AM_RGB_Slave_08d, AM_RGB_Slave_09d, AM_RGB_Slave_10d, AM_RGB_Slave_11d, AM_RGB_Slave_12d, AM_RGB_Slave_13d, AM_RGB_Slave_14d, Virtual_AM_RGB_Slave_16d;
+}
+Signals {
+	BCM_RGB_Color_u_01: 7, 0, HCP4_uC1_1, AM_RGB_Slave_01d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_Color_u_02: 7, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	BCM_RGB_Color_u_03: 7, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	BCM_RGB_Color_u_04: 7, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	BCM_RGB_Color_u_05: 7, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	BCM_RGB_Color_u_06: 7, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	BCM_RGB_Color_u_07: 7, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	BCM_RGB_Color_u_08: 7, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	BCM_RGB_Color_u_09: 7, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	BCM_RGB_Color_u_10: 7, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	BCM_RGB_Color_u_11: 7, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	BCM_RGB_Color_u_12: 7, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	BCM_RGB_Color_u_13: 7, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	BCM_RGB_Color_u_14: 7, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	BCM_RGB_Color_v_01: 7, 0, HCP4_uC1_1, AM_RGB_Slave_01d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_Color_v_02: 7, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	BCM_RGB_Color_v_03: 7, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	BCM_RGB_Color_v_04: 7, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	BCM_RGB_Color_v_05: 7, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	BCM_RGB_Color_v_06: 7, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	BCM_RGB_Color_v_07: 7, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	BCM_RGB_Color_v_08: 7, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	BCM_RGB_Color_v_09: 7, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	BCM_RGB_Color_v_10: 7, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	BCM_RGB_Color_v_11: 7, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	BCM_RGB_Color_v_12: 7, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	BCM_RGB_Color_v_13: 7, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	BCM_RGB_Color_v_14: 7, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	BCM_RGB_Dimmrampe_01: 6, 0, HCP4_uC1_1, AM_RGB_Slave_01d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_Dimmrampe_02: 6, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	BCM_RGB_Dimmrampe_03: 6, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	BCM_RGB_Dimmrampe_04: 6, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	BCM_RGB_Dimmrampe_05: 6, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	BCM_RGB_Dimmrampe_06: 6, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	BCM_RGB_Dimmrampe_07: 6, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	BCM_RGB_Dimmrampe_08: 6, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	BCM_RGB_Dimmrampe_09: 6, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	BCM_RGB_Dimmrampe_10: 6, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	BCM_RGB_Dimmrampe_11: 6, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	BCM_RGB_Dimmrampe_12: 6, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	BCM_RGB_Dimmrampe_13: 6, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	BCM_RGB_Dimmrampe_14: 6, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	BCM_RGB_GlobalSync: 1, 0, HCP4_uC1_1, AM_RGB_Slave_01d, AM_RGB_Slave_02d, AM_RGB_Slave_03d, AM_RGB_Slave_04d, AM_RGB_Slave_05d, AM_RGB_Slave_06d, AM_RGB_Slave_07d, AM_RGB_Slave_08d, AM_RGB_Slave_09d, AM_RGB_Slave_10d, AM_RGB_Slave_11d, AM_RGB_Slave_12d, AM_RGB_Slave_13d, AM_RGB_Slave_14d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_GlobalSync_01: 1, 0, HCP4_uC1_1, AM_RGB_Slave_01d, AM_RGB_Slave_02d, AM_RGB_Slave_03d, AM_RGB_Slave_04d, AM_RGB_Slave_05d, AM_RGB_Slave_06d, AM_RGB_Slave_07d, AM_RGB_Slave_08d, AM_RGB_Slave_09d, AM_RGB_Slave_10d, AM_RGB_Slave_11d, AM_RGB_Slave_12d, AM_RGB_Slave_13d, AM_RGB_Slave_14d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_GlobalSync_03: 1, 0, HCP4_uC1_1, AM_RGB_Slave_01d, AM_RGB_Slave_02d, AM_RGB_Slave_03d, AM_RGB_Slave_04d, AM_RGB_Slave_05d, AM_RGB_Slave_06d, AM_RGB_Slave_07d, AM_RGB_Slave_08d, AM_RGB_Slave_09d, AM_RGB_Slave_10d, AM_RGB_Slave_11d, AM_RGB_Slave_12d, AM_RGB_Slave_13d, AM_RGB_Slave_14d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_GlobalSync_05: 1, 0, HCP4_uC1_1, AM_RGB_Slave_01d, AM_RGB_Slave_02d, AM_RGB_Slave_03d, AM_RGB_Slave_04d, AM_RGB_Slave_05d, AM_RGB_Slave_06d, AM_RGB_Slave_07d, AM_RGB_Slave_08d, AM_RGB_Slave_09d, AM_RGB_Slave_10d, AM_RGB_Slave_11d, AM_RGB_Slave_12d, AM_RGB_Slave_13d, AM_RGB_Slave_14d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_GlobalSync_07: 1, 0, HCP4_uC1_1, AM_RGB_Slave_01d, AM_RGB_Slave_02d, AM_RGB_Slave_03d, AM_RGB_Slave_04d, AM_RGB_Slave_05d, AM_RGB_Slave_06d, AM_RGB_Slave_07d, AM_RGB_Slave_08d, AM_RGB_Slave_09d, AM_RGB_Slave_10d, AM_RGB_Slave_11d, AM_RGB_Slave_12d, AM_RGB_Slave_13d, AM_RGB_Slave_14d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_GlobalSync_09: 1, 0, HCP4_uC1_1, AM_RGB_Slave_01d, AM_RGB_Slave_02d, AM_RGB_Slave_03d, AM_RGB_Slave_04d, AM_RGB_Slave_05d, AM_RGB_Slave_06d, AM_RGB_Slave_07d, AM_RGB_Slave_08d, AM_RGB_Slave_09d, AM_RGB_Slave_10d, AM_RGB_Slave_11d, AM_RGB_Slave_12d, AM_RGB_Slave_13d, AM_RGB_Slave_14d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_GlobalSync_11: 1, 0, HCP4_uC1_1, AM_RGB_Slave_01d, AM_RGB_Slave_02d, AM_RGB_Slave_03d, AM_RGB_Slave_04d, AM_RGB_Slave_05d, AM_RGB_Slave_06d, AM_RGB_Slave_07d, AM_RGB_Slave_08d, AM_RGB_Slave_09d, AM_RGB_Slave_10d, AM_RGB_Slave_11d, AM_RGB_Slave_12d, AM_RGB_Slave_13d, AM_RGB_Slave_14d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_GlobalSync_13: 1, 0, HCP4_uC1_1, AM_RGB_Slave_01d, AM_RGB_Slave_02d, AM_RGB_Slave_03d, AM_RGB_Slave_04d, AM_RGB_Slave_05d, AM_RGB_Slave_06d, AM_RGB_Slave_07d, AM_RGB_Slave_08d, AM_RGB_Slave_09d, AM_RGB_Slave_10d, AM_RGB_Slave_11d, AM_RGB_Slave_12d, AM_RGB_Slave_13d, AM_RGB_Slave_14d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_Intensitaet_01: 7, 127, HCP4_uC1_1, AM_RGB_Slave_01d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_Intensitaet_02: 7, 127, HCP4_uC1_1, AM_RGB_Slave_02d;
+	BCM_RGB_Intensitaet_03: 7, 127, HCP4_uC1_1, AM_RGB_Slave_03d;
+	BCM_RGB_Intensitaet_04: 7, 127, HCP4_uC1_1, AM_RGB_Slave_04d;
+	BCM_RGB_Intensitaet_05: 7, 127, HCP4_uC1_1, AM_RGB_Slave_05d;
+	BCM_RGB_Intensitaet_06: 7, 127, HCP4_uC1_1, AM_RGB_Slave_06d;
+	BCM_RGB_Intensitaet_07: 7, 127, HCP4_uC1_1, AM_RGB_Slave_07d;
+	BCM_RGB_Intensitaet_08: 7, 127, HCP4_uC1_1, AM_RGB_Slave_08d;
+	BCM_RGB_Intensitaet_09: 7, 127, HCP4_uC1_1, AM_RGB_Slave_09d;
+	BCM_RGB_Intensitaet_10: 7, 127, HCP4_uC1_1, AM_RGB_Slave_10d;
+	BCM_RGB_Intensitaet_11: 7, 127, HCP4_uC1_1, AM_RGB_Slave_11d;
+	BCM_RGB_Intensitaet_12: 7, 127, HCP4_uC1_1, AM_RGB_Slave_12d;
+	BCM_RGB_Intensitaet_13: 7, 127, HCP4_uC1_1, AM_RGB_Slave_13d;
+	BCM_RGB_Intensitaet_14: 7, 127, HCP4_uC1_1, AM_RGB_Slave_14d;
+	BCM_RGB_Sonderfunktion_01: 4, 0, HCP4_uC1_1, AM_RGB_Slave_01d, Virtual_AM_RGB_Slave_16d;
+	BCM_RGB_Sonderfunktion_02: 4, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	BCM_RGB_Sonderfunktion_03: 4, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	BCM_RGB_Sonderfunktion_04: 4, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	BCM_RGB_Sonderfunktion_05: 4, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	BCM_RGB_Sonderfunktion_06: 4, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	BCM_RGB_Sonderfunktion_07: 4, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	BCM_RGB_Sonderfunktion_08: 4, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	BCM_RGB_Sonderfunktion_09: 4, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	BCM_RGB_Sonderfunktion_10: 4, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	BCM_RGB_Sonderfunktion_11: 4, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	BCM_RGB_Sonderfunktion_12: 4, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	BCM_RGB_Sonderfunktion_13: 4, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	BCM_RGB_Sonderfunktion_14: 4, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	RGB_Slave_01d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_01d, HCP4_uC1_1;
+	RGB_Slave_01d_HW_Version: 8, 0, AM_RGB_Slave_01d, HCP4_uC1_1;
+	RGB_Slave_01d_IntError: 2, 0, AM_RGB_Slave_01d, HCP4_uC1_1;
+	RGB_Slave_01d_ResponseError: 1, 0, AM_RGB_Slave_01d, HCP4_uC1_1;
+	RGB_Slave_01d_StoredNAD: 8, 0, AM_RGB_Slave_01d, HCP4_uC1_1;
+	RGB_Slave_01d_SW_Version: 8, 0, AM_RGB_Slave_01d, HCP4_uC1_1;
+	RGB_Slave_01d_TempState: 3, 0, AM_RGB_Slave_01d, HCP4_uC1_1;
+	RGB_Slave_01d_Weisspunkt_u: 8, 0, AM_RGB_Slave_01d, HCP4_uC1_1;
+	RGB_Slave_01d_Weisspunkt_v: 8, 0, AM_RGB_Slave_01d, HCP4_uC1_1;
+	RGB_Slave_02d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_02d, HCP4_uC1_1;
+	RGB_Slave_02d_HW_Version: 8, 0, AM_RGB_Slave_02d, HCP4_uC1_1;
+	RGB_Slave_02d_IntError: 2, 0, AM_RGB_Slave_02d, HCP4_uC1_1;
+	RGB_Slave_02d_ResponseError: 1, 0, AM_RGB_Slave_02d, HCP4_uC1_1;
+	RGB_Slave_02d_StoredNAD: 8, 0, AM_RGB_Slave_02d, HCP4_uC1_1;
+	RGB_Slave_02d_SW_Version: 8, 0, AM_RGB_Slave_02d, HCP4_uC1_1;
+	RGB_Slave_02d_TempState: 3, 0, AM_RGB_Slave_02d, HCP4_uC1_1;
+	RGB_Slave_02d_Weisspunkt_u: 8, 0, AM_RGB_Slave_02d, HCP4_uC1_1;
+	RGB_Slave_02d_Weisspunkt_v: 8, 0, AM_RGB_Slave_02d, HCP4_uC1_1;
+	RGB_Slave_03d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_03d, HCP4_uC1_1;
+	RGB_Slave_03d_HW_Version: 8, 0, AM_RGB_Slave_03d, HCP4_uC1_1;
+	RGB_Slave_03d_IntError: 2, 0, AM_RGB_Slave_03d, HCP4_uC1_1;
+	RGB_Slave_03d_ResponseError: 1, 0, AM_RGB_Slave_03d, HCP4_uC1_1;
+	RGB_Slave_03d_StoredNAD: 8, 0, AM_RGB_Slave_03d, HCP4_uC1_1;
+	RGB_Slave_03d_SW_Version: 8, 0, AM_RGB_Slave_03d, HCP4_uC1_1;
+	RGB_Slave_03d_TempState: 3, 0, AM_RGB_Slave_03d, HCP4_uC1_1;
+	RGB_Slave_03d_Weisspunkt_u: 8, 0, AM_RGB_Slave_03d, HCP4_uC1_1;
+	RGB_Slave_03d_Weisspunkt_v: 8, 0, AM_RGB_Slave_03d, HCP4_uC1_1;
+	RGB_Slave_04d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_04d, HCP4_uC1_1;
+	RGB_Slave_04d_HW_Version: 8, 0, AM_RGB_Slave_04d, HCP4_uC1_1;
+	RGB_Slave_04d_IntError: 2, 0, AM_RGB_Slave_04d, HCP4_uC1_1;
+	RGB_Slave_04d_ResponseError: 1, 0, AM_RGB_Slave_04d, HCP4_uC1_1;
+	RGB_Slave_04d_StoredNAD: 8, 0, AM_RGB_Slave_04d, HCP4_uC1_1;
+	RGB_Slave_04d_SW_Version: 8, 0, AM_RGB_Slave_04d, HCP4_uC1_1;
+	RGB_Slave_04d_TempState: 3, 0, AM_RGB_Slave_04d, HCP4_uC1_1;
+	RGB_Slave_04d_Weisspunkt_u: 8, 0, AM_RGB_Slave_04d, HCP4_uC1_1;
+	RGB_Slave_04d_Weisspunkt_v: 8, 0, AM_RGB_Slave_04d, HCP4_uC1_1;
+	RGB_Slave_05d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_05d, HCP4_uC1_1;
+	RGB_Slave_05d_HW_Version: 8, 0, AM_RGB_Slave_05d, HCP4_uC1_1;
+	RGB_Slave_05d_IntError: 2, 0, AM_RGB_Slave_05d, HCP4_uC1_1;
+	RGB_Slave_05d_ResponseError: 1, 0, AM_RGB_Slave_05d, HCP4_uC1_1;
+	RGB_Slave_05d_StoredNAD: 8, 0, AM_RGB_Slave_05d, HCP4_uC1_1;
+	RGB_Slave_05d_SW_Version: 8, 0, AM_RGB_Slave_05d, HCP4_uC1_1;
+	RGB_Slave_05d_TempState: 3, 0, AM_RGB_Slave_05d, HCP4_uC1_1;
+	RGB_Slave_05d_Weisspunkt_u: 8, 0, AM_RGB_Slave_05d, HCP4_uC1_1;
+	RGB_Slave_05d_Weisspunkt_v: 8, 0, AM_RGB_Slave_05d, HCP4_uC1_1;
+	RGB_Slave_06d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_06d, HCP4_uC1_1;
+	RGB_Slave_06d_HW_Version: 8, 0, AM_RGB_Slave_06d, HCP4_uC1_1;
+	RGB_Slave_06d_IntError: 2, 0, AM_RGB_Slave_06d, HCP4_uC1_1;
+	RGB_Slave_06d_ResponseError: 1, 0, AM_RGB_Slave_06d, HCP4_uC1_1;
+	RGB_Slave_06d_StoredNAD: 8, 0, AM_RGB_Slave_06d, HCP4_uC1_1;
+	RGB_Slave_06d_SW_Version: 8, 0, AM_RGB_Slave_06d, HCP4_uC1_1;
+	RGB_Slave_06d_TempState: 3, 0, AM_RGB_Slave_06d, HCP4_uC1_1;
+	RGB_Slave_06d_Weisspunkt_u: 8, 0, AM_RGB_Slave_06d, HCP4_uC1_1;
+	RGB_Slave_06d_Weisspunkt_v: 8, 0, AM_RGB_Slave_06d, HCP4_uC1_1;
+	RGB_Slave_07d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_07d, HCP4_uC1_1;
+	RGB_Slave_07d_HW_Version: 8, 0, AM_RGB_Slave_07d, HCP4_uC1_1;
+	RGB_Slave_07d_IntError: 2, 0, AM_RGB_Slave_07d, HCP4_uC1_1;
+	RGB_Slave_07d_ResponseError: 1, 0, AM_RGB_Slave_07d, HCP4_uC1_1;
+	RGB_Slave_07d_StoredNAD: 8, 0, AM_RGB_Slave_07d, HCP4_uC1_1;
+	RGB_Slave_07d_SW_Version: 8, 0, AM_RGB_Slave_07d, HCP4_uC1_1;
+	RGB_Slave_07d_TempState: 3, 0, AM_RGB_Slave_07d, HCP4_uC1_1;
+	RGB_Slave_07d_Weisspunkt_u: 8, 0, AM_RGB_Slave_07d, HCP4_uC1_1;
+	RGB_Slave_07d_Weisspunkt_v: 8, 0, AM_RGB_Slave_07d, HCP4_uC1_1;
+	RGB_Slave_08d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_08d, HCP4_uC1_1;
+	RGB_Slave_08d_HW_Version: 8, 0, AM_RGB_Slave_08d, HCP4_uC1_1;
+	RGB_Slave_08d_IntError: 2, 0, AM_RGB_Slave_08d, HCP4_uC1_1;
+	RGB_Slave_08d_ResponseError: 1, 0, AM_RGB_Slave_08d, HCP4_uC1_1;
+	RGB_Slave_08d_StoredNAD: 8, 0, AM_RGB_Slave_08d, HCP4_uC1_1;
+	RGB_Slave_08d_SW_Version: 8, 0, AM_RGB_Slave_08d, HCP4_uC1_1;
+	RGB_Slave_08d_TempState: 3, 0, AM_RGB_Slave_08d, HCP4_uC1_1;
+	RGB_Slave_08d_Weisspunkt_u: 8, 0, AM_RGB_Slave_08d, HCP4_uC1_1;
+	RGB_Slave_08d_Weisspunkt_v: 8, 0, AM_RGB_Slave_08d, HCP4_uC1_1;
+	RGB_Slave_09d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_09d, HCP4_uC1_1;
+	RGB_Slave_09d_HW_Version: 8, 0, AM_RGB_Slave_09d, HCP4_uC1_1;
+	RGB_Slave_09d_IntError: 2, 0, AM_RGB_Slave_09d, HCP4_uC1_1;
+	RGB_Slave_09d_ResponseError: 1, 0, AM_RGB_Slave_09d, HCP4_uC1_1;
+	RGB_Slave_09d_StoredNAD: 8, 0, AM_RGB_Slave_09d, HCP4_uC1_1;
+	RGB_Slave_09d_SW_Version: 8, 0, AM_RGB_Slave_09d, HCP4_uC1_1;
+	RGB_Slave_09d_TempState: 3, 0, AM_RGB_Slave_09d, HCP4_uC1_1;
+	RGB_Slave_09d_Weisspunkt_u: 8, 0, AM_RGB_Slave_09d, HCP4_uC1_1;
+	RGB_Slave_09d_Weisspunkt_v: 8, 0, AM_RGB_Slave_09d, HCP4_uC1_1;
+	RGB_Slave_10d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_10d, HCP4_uC1_1;
+	RGB_Slave_10d_HW_Version: 8, 0, AM_RGB_Slave_10d, HCP4_uC1_1;
+	RGB_Slave_10d_IntError: 2, 0, AM_RGB_Slave_10d, HCP4_uC1_1;
+	RGB_Slave_10d_ResponseError: 1, 0, AM_RGB_Slave_10d, HCP4_uC1_1;
+	RGB_Slave_10d_StoredNAD: 8, 0, AM_RGB_Slave_10d, HCP4_uC1_1;
+	RGB_Slave_10d_SW_Version: 8, 0, AM_RGB_Slave_10d, HCP4_uC1_1;
+	RGB_Slave_10d_TempState: 3, 0, AM_RGB_Slave_10d, HCP4_uC1_1;
+	RGB_Slave_10d_Weisspunkt_u: 8, 0, AM_RGB_Slave_10d, HCP4_uC1_1;
+	RGB_Slave_10d_Weisspunkt_v: 8, 0, AM_RGB_Slave_10d, HCP4_uC1_1;
+	RGB_Slave_11d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_11d, HCP4_uC1_1;
+	RGB_Slave_11d_HW_Version: 8, 0, AM_RGB_Slave_11d, HCP4_uC1_1;
+	RGB_Slave_11d_IntError: 2, 0, AM_RGB_Slave_11d, HCP4_uC1_1;
+	RGB_Slave_11d_ResponseError: 1, 0, AM_RGB_Slave_11d, HCP4_uC1_1;
+	RGB_Slave_11d_StoredNAD: 8, 0, AM_RGB_Slave_11d, HCP4_uC1_1;
+	RGB_Slave_11d_SW_Version: 8, 0, AM_RGB_Slave_11d, HCP4_uC1_1;
+	RGB_Slave_11d_TempState: 3, 0, AM_RGB_Slave_11d, HCP4_uC1_1;
+	RGB_Slave_11d_Weisspunkt_u: 8, 0, AM_RGB_Slave_11d, HCP4_uC1_1;
+	RGB_Slave_11d_Weisspunkt_v: 8, 0, AM_RGB_Slave_11d, HCP4_uC1_1;
+	RGB_Slave_12d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_12d, HCP4_uC1_1;
+	RGB_Slave_12d_HW_Version: 8, 0, AM_RGB_Slave_12d, HCP4_uC1_1;
+	RGB_Slave_12d_IntError: 2, 0, AM_RGB_Slave_12d, HCP4_uC1_1;
+	RGB_Slave_12d_ResponseError: 1, 0, AM_RGB_Slave_12d, HCP4_uC1_1;
+	RGB_Slave_12d_StoredNAD: 8, 0, AM_RGB_Slave_12d, HCP4_uC1_1;
+	RGB_Slave_12d_SW_Version: 8, 0, AM_RGB_Slave_12d, HCP4_uC1_1;
+	RGB_Slave_12d_TempState: 3, 0, AM_RGB_Slave_12d, HCP4_uC1_1;
+	RGB_Slave_12d_Weisspunkt_u: 8, 0, AM_RGB_Slave_12d, HCP4_uC1_1;
+	RGB_Slave_12d_Weisspunkt_v: 8, 0, AM_RGB_Slave_12d, HCP4_uC1_1;
+	RGB_Slave_13d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_13d, HCP4_uC1_1;
+	RGB_Slave_13d_HW_Version: 8, 0, AM_RGB_Slave_13d, HCP4_uC1_1;
+	RGB_Slave_13d_IntError: 2, 0, AM_RGB_Slave_13d, HCP4_uC1_1;
+	RGB_Slave_13d_ResponseError: 1, 0, AM_RGB_Slave_13d, HCP4_uC1_1;
+	RGB_Slave_13d_StoredNAD: 8, 0, AM_RGB_Slave_13d, HCP4_uC1_1;
+	RGB_Slave_13d_SW_Version: 8, 0, AM_RGB_Slave_13d, HCP4_uC1_1;
+	RGB_Slave_13d_TempState: 3, 0, AM_RGB_Slave_13d, HCP4_uC1_1;
+	RGB_Slave_13d_Weisspunkt_u: 8, 0, AM_RGB_Slave_13d, HCP4_uC1_1;
+	RGB_Slave_13d_Weisspunkt_v: 8, 0, AM_RGB_Slave_13d, HCP4_uC1_1;
+	RGB_Slave_14d_HelligkeitsFaktor: 7, 0, AM_RGB_Slave_14d, HCP4_uC1_1;
+	RGB_Slave_14d_HW_Version: 8, 0, AM_RGB_Slave_14d, HCP4_uC1_1;
+	RGB_Slave_14d_IntError: 2, 0, AM_RGB_Slave_14d, HCP4_uC1_1;
+	RGB_Slave_14d_ResponseError: 1, 0, AM_RGB_Slave_14d, HCP4_uC1_1;
+	RGB_Slave_14d_StoredNAD: 8, 0, AM_RGB_Slave_14d, HCP4_uC1_1;
+	RGB_Slave_14d_SW_Version: 8, 0, AM_RGB_Slave_14d, HCP4_uC1_1;
+	RGB_Slave_14d_TempState: 3, 0, AM_RGB_Slave_14d, HCP4_uC1_1;
+	RGB_Slave_14d_Weisspunkt_u: 8, 0, AM_RGB_Slave_14d, HCP4_uC1_1;
+	RGB_Slave_14d_Weisspunkt_v: 8, 0, AM_RGB_Slave_14d, HCP4_uC1_1;
+	RGB_Slave_16d_ResponseError: 1, 0, Virtual_AM_RGB_Slave_16d, HCP4_uC1_1;
+	SWrite_CRC_01: 8, 0, HCP4_uC1_1, AM_RGB_Slave_01d;
+	SWrite_CRC_02: 8, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	SWrite_CRC_03: 8, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	SWrite_CRC_04: 8, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	SWrite_CRC_05: 8, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	SWrite_CRC_06: 8, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	SWrite_CRC_07: 8, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	SWrite_CRC_08: 8, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	SWrite_CRC_09: 8, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	SWrite_CRC_10: 8, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	SWrite_CRC_11: 8, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	SWrite_CRC_12: 8, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	SWrite_CRC_13: 8, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	SWrite_CRC_14: 8, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	SWrite_Data_B1_01: 8, 0, HCP4_uC1_1, AM_RGB_Slave_01d;
+	SWrite_Data_B1_02: 8, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	SWrite_Data_B1_03: 8, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	SWrite_Data_B1_04: 8, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	SWrite_Data_B1_05: 8, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	SWrite_Data_B1_06: 8, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	SWrite_Data_B1_07: 8, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	SWrite_Data_B1_08: 8, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	SWrite_Data_B1_09: 8, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	SWrite_Data_B1_10: 8, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	SWrite_Data_B1_11: 8, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	SWrite_Data_B1_12: 8, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	SWrite_Data_B1_13: 8, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	SWrite_Data_B1_14: 8, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	SWrite_Data_B2_01: 8, 0, HCP4_uC1_1, AM_RGB_Slave_01d;
+	SWrite_Data_B2_02: 8, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	SWrite_Data_B2_03: 8, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	SWrite_Data_B2_04: 8, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	SWrite_Data_B2_05: 8, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	SWrite_Data_B2_06: 8, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	SWrite_Data_B2_07: 8, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	SWrite_Data_B2_08: 8, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	SWrite_Data_B2_09: 8, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	SWrite_Data_B2_10: 8, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	SWrite_Data_B2_11: 8, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	SWrite_Data_B2_12: 8, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	SWrite_Data_B2_13: 8, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	SWrite_Data_B2_14: 8, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	SWrite_Data_B3_01: 8, 0, HCP4_uC1_1, AM_RGB_Slave_01d;
+	SWrite_Data_B3_02: 8, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	SWrite_Data_B3_03: 8, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	SWrite_Data_B3_04: 8, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	SWrite_Data_B3_05: 8, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	SWrite_Data_B3_06: 8, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	SWrite_Data_B3_07: 8, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	SWrite_Data_B3_08: 8, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	SWrite_Data_B3_09: 8, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	SWrite_Data_B3_10: 8, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	SWrite_Data_B3_11: 8, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	SWrite_Data_B3_12: 8, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	SWrite_Data_B3_13: 8, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	SWrite_Data_B3_14: 8, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	SWrite_Data_B4_01: 8, 0, HCP4_uC1_1, AM_RGB_Slave_01d;
+	SWrite_Data_B4_02: 8, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	SWrite_Data_B4_03: 8, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	SWrite_Data_B4_04: 8, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	SWrite_Data_B4_05: 8, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	SWrite_Data_B4_06: 8, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	SWrite_Data_B4_07: 8, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	SWrite_Data_B4_08: 8, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	SWrite_Data_B4_09: 8, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	SWrite_Data_B4_10: 8, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	SWrite_Data_B4_11: 8, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	SWrite_Data_B4_12: 8, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	SWrite_Data_B4_13: 8, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	SWrite_Data_B4_14: 8, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	SWrite_Data_B5_01: 8, 0, HCP4_uC1_1, AM_RGB_Slave_01d;
+	SWrite_Data_B5_02: 8, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	SWrite_Data_B5_03: 8, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	SWrite_Data_B5_04: 8, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	SWrite_Data_B5_05: 8, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	SWrite_Data_B5_06: 8, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	SWrite_Data_B5_07: 8, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	SWrite_Data_B5_08: 8, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	SWrite_Data_B5_09: 8, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	SWrite_Data_B5_10: 8, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	SWrite_Data_B5_11: 8, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	SWrite_Data_B5_12: 8, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	SWrite_Data_B5_13: 8, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	SWrite_Data_B5_14: 8, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	SWrite_Dummy_01: 5, 0, HCP4_uC1_1, AM_RGB_Slave_01d;
+	SWrite_Dummy_02: 5, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	SWrite_Dummy_03: 5, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	SWrite_Dummy_04: 5, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	SWrite_Dummy_05: 5, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	SWrite_Dummy_06: 5, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	SWrite_Dummy_07: 5, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	SWrite_Dummy_08: 5, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	SWrite_Dummy_09: 5, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	SWrite_Dummy_10: 5, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	SWrite_Dummy_11: 5, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	SWrite_Dummy_12: 5, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	SWrite_Dummy_13: 5, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	SWrite_Dummy_14: 5, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	SWrite_Len_01: 3, 0, HCP4_uC1_1, AM_RGB_Slave_01d;
+	SWrite_Len_02: 3, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	SWrite_Len_03: 3, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	SWrite_Len_04: 3, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	SWrite_Len_05: 3, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	SWrite_Len_06: 3, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	SWrite_Len_07: 3, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	SWrite_Len_08: 3, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	SWrite_Len_09: 3, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	SWrite_Len_10: 3, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	SWrite_Len_11: 3, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	SWrite_Len_12: 3, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	SWrite_Len_13: 3, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	SWrite_Len_14: 3, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+	SWrite_MemAddress_01: 8, 0, HCP4_uC1_1, AM_RGB_Slave_01d;
+	SWrite_MemAddress_02: 8, 0, HCP4_uC1_1, AM_RGB_Slave_02d;
+	SWrite_MemAddress_03: 8, 0, HCP4_uC1_1, AM_RGB_Slave_03d;
+	SWrite_MemAddress_04: 8, 0, HCP4_uC1_1, AM_RGB_Slave_04d;
+	SWrite_MemAddress_05: 8, 0, HCP4_uC1_1, AM_RGB_Slave_05d;
+	SWrite_MemAddress_06: 8, 0, HCP4_uC1_1, AM_RGB_Slave_06d;
+	SWrite_MemAddress_07: 8, 0, HCP4_uC1_1, AM_RGB_Slave_07d;
+	SWrite_MemAddress_08: 8, 0, HCP4_uC1_1, AM_RGB_Slave_08d;
+	SWrite_MemAddress_09: 8, 0, HCP4_uC1_1, AM_RGB_Slave_09d;
+	SWrite_MemAddress_10: 8, 0, HCP4_uC1_1, AM_RGB_Slave_10d;
+	SWrite_MemAddress_11: 8, 0, HCP4_uC1_1, AM_RGB_Slave_11d;
+	SWrite_MemAddress_12: 8, 0, HCP4_uC1_1, AM_RGB_Slave_12d;
+	SWrite_MemAddress_13: 8, 0, HCP4_uC1_1, AM_RGB_Slave_13d;
+	SWrite_MemAddress_14: 8, 0, HCP4_uC1_1, AM_RGB_Slave_14d;
+}
+Diagnostic_signals {
+		MasterReqB0:8,0;
+		MasterReqB1:8,0;
+		MasterReqB2:8,0;
+		MasterReqB3:8,0;
+		MasterReqB4:8,0;
+		MasterReqB5:8,0;
+		MasterReqB6:8,0;
+		MasterReqB7:8,0;
+		SlaveRespB0:8,0;
+		SlaveRespB1:8,0;
+		SlaveRespB2:8,0;
+		SlaveRespB3:8,0;
+		SlaveRespB4:8,0;
+		SlaveRespB5:8,0;
+		SlaveRespB6:8,0;
+		SlaveRespB7:8,0;
+}
+Frames {
+	RGBe_Slave_d_01_02: 26, HCP4_uC1_1, 8 {
+		BCM_RGB_Color_u_01, 0;
+		BCM_RGB_Color_v_01, 7;
+		BCM_RGB_Dimmrampe_01, 14;
+		BCM_RGB_Sonderfunktion_01, 20;
+		BCM_RGB_Intensitaet_01, 24;
+		BCM_RGB_Color_u_02, 32;
+		BCM_RGB_Color_v_02, 39;
+		BCM_RGB_Dimmrampe_02, 46;
+		BCM_RGB_Sonderfunktion_02, 52;
+		BCM_RGB_Intensitaet_02, 56;
+		BCM_RGB_GlobalSync_01, 63;
+}
+	RGBe_Slave_d_03_04: 27, HCP4_uC1_1, 8 {
+		BCM_RGB_Color_u_03, 0;
+		BCM_RGB_Color_v_03, 7;
+		BCM_RGB_Dimmrampe_03, 14;
+		BCM_RGB_Sonderfunktion_03, 20;
+		BCM_RGB_Intensitaet_03, 24;
+		BCM_RGB_Color_u_04, 32;
+		BCM_RGB_Color_v_04, 39;
+		BCM_RGB_Dimmrampe_04, 46;
+		BCM_RGB_Sonderfunktion_04, 52;
+		BCM_RGB_Intensitaet_04, 56;
+		BCM_RGB_GlobalSync_03, 63;
+}
+	RGBe_Slave_d_05_06: 28, HCP4_uC1_1, 8 {
+		BCM_RGB_Color_u_05, 0;
+		BCM_RGB_Color_v_05, 7;
+		BCM_RGB_Dimmrampe_05, 14;
+		BCM_RGB_Sonderfunktion_05, 20;
+		BCM_RGB_Intensitaet_05, 24;
+		BCM_RGB_Color_u_06, 32;
+		BCM_RGB_Color_v_06, 39;
+		BCM_RGB_Dimmrampe_06, 46;
+		BCM_RGB_Sonderfunktion_06, 52;
+		BCM_RGB_Intensitaet_06, 56;
+		BCM_RGB_GlobalSync_05, 63;
+}
+	RGBe_Slave_d_07_08: 29, HCP4_uC1_1, 8 {
+		BCM_RGB_Color_u_07, 0;
+		BCM_RGB_Color_v_07, 7;
+		BCM_RGB_Dimmrampe_07, 14;
+		BCM_RGB_Sonderfunktion_07, 20;
+		BCM_RGB_Intensitaet_07, 24;
+		BCM_RGB_Color_u_08, 32;
+		BCM_RGB_Color_v_08, 39;
+		BCM_RGB_Dimmrampe_08, 46;
+		BCM_RGB_Sonderfunktion_08, 52;
+		BCM_RGB_Intensitaet_08, 56;
+		BCM_RGB_GlobalSync_07, 63;
+}
+	RGBe_Slave_d_09_10: 30, HCP4_uC1_1, 8 {
+		BCM_RGB_Color_u_09, 0;
+		BCM_RGB_Color_v_09, 7;
+		BCM_RGB_Dimmrampe_09, 14;
+		BCM_RGB_Sonderfunktion_09, 20;
+		BCM_RGB_Intensitaet_09, 24;
+		BCM_RGB_Color_u_10, 32;
+		BCM_RGB_Color_v_10, 39;
+		BCM_RGB_Dimmrampe_10, 46;
+		BCM_RGB_Sonderfunktion_10, 52;
+		BCM_RGB_Intensitaet_10, 56;
+		BCM_RGB_GlobalSync_09, 63;
+}
+	RGBe_Slave_d_11_12: 32, HCP4_uC1_1, 8 {
+		BCM_RGB_Color_u_11, 0;
+		BCM_RGB_Color_v_11, 7;
+		BCM_RGB_Dimmrampe_11, 14;
+		BCM_RGB_Sonderfunktion_11, 20;
+		BCM_RGB_Intensitaet_11, 24;
+		BCM_RGB_Color_u_12, 32;
+		BCM_RGB_Color_v_12, 39;
+		BCM_RGB_Dimmrampe_12, 46;
+		BCM_RGB_Sonderfunktion_12, 52;
+		BCM_RGB_Intensitaet_12, 56;
+		BCM_RGB_GlobalSync_11, 63;
+}
+	RGBe_Slave_d_13_14: 33, HCP4_uC1_1, 8 {
+		BCM_RGB_Color_u_13, 0;
+		BCM_RGB_Color_v_13, 7;
+		BCM_RGB_Dimmrampe_13, 14;
+		BCM_RGB_Sonderfunktion_13, 20;
+		BCM_RGB_Intensitaet_13, 24;
+		BCM_RGB_Color_u_14, 32;
+		BCM_RGB_Color_v_14, 39;
+		BCM_RGB_Dimmrampe_14, 46;
+		BCM_RGB_Sonderfunktion_14, 52;
+		BCM_RGB_Intensitaet_14, 56;
+		BCM_RGB_GlobalSync_13, 63;
+}
+	RGBe_Sync_abcd: 31, HCP4_uC1_1, 1 {
+		BCM_RGB_GlobalSync, 0;
+}
+	RGBe_Write_d_01: 35, HCP4_uC1_1, 8 {
+		SWrite_Dummy_01, 0;
+		SWrite_Len_01, 5;
+		SWrite_MemAddress_01, 8;
+		SWrite_Data_B1_01, 16;
+		SWrite_Data_B2_01, 24;
+		SWrite_Data_B3_01, 32;
+		SWrite_Data_B4_01, 40;
+		SWrite_Data_B5_01, 48;
+		SWrite_CRC_01, 56;
+}
+	RGBe_Write_d_02: 36, HCP4_uC1_1, 8 {
+		SWrite_Dummy_02, 0;
+		SWrite_Len_02, 5;
+		SWrite_MemAddress_02, 8;
+		SWrite_Data_B1_02, 16;
+		SWrite_Data_B2_02, 24;
+		SWrite_Data_B3_02, 32;
+		SWrite_Data_B4_02, 40;
+		SWrite_Data_B5_02, 48;
+		SWrite_CRC_02, 56;
+}
+	RGBe_Write_d_03: 37, HCP4_uC1_1, 8 {
+		SWrite_Dummy_03, 0;
+		SWrite_Len_03, 5;
+		SWrite_MemAddress_03, 8;
+		SWrite_Data_B1_03, 16;
+		SWrite_Data_B2_03, 24;
+		SWrite_Data_B3_03, 32;
+		SWrite_Data_B4_03, 40;
+		SWrite_Data_B5_03, 48;
+		SWrite_CRC_03, 56;
+}
+	RGBe_Write_d_04: 38, HCP4_uC1_1, 8 {
+		SWrite_Dummy_04, 0;
+		SWrite_Len_04, 5;
+		SWrite_MemAddress_04, 8;
+		SWrite_Data_B1_04, 16;
+		SWrite_Data_B2_04, 24;
+		SWrite_Data_B3_04, 32;
+		SWrite_Data_B4_04, 40;
+		SWrite_Data_B5_04, 48;
+		SWrite_CRC_04, 56;
+}
+	RGBe_Write_d_05: 39, HCP4_uC1_1, 8 {
+		SWrite_Dummy_05, 0;
+		SWrite_Len_05, 5;
+		SWrite_MemAddress_05, 8;
+		SWrite_Data_B1_05, 16;
+		SWrite_Data_B2_05, 24;
+		SWrite_Data_B3_05, 32;
+		SWrite_Data_B4_05, 40;
+		SWrite_Data_B5_05, 48;
+		SWrite_CRC_05, 56;
+}
+	RGBe_Write_d_06: 40, HCP4_uC1_1, 8 {
+		SWrite_Dummy_06, 0;
+		SWrite_Len_06, 5;
+		SWrite_MemAddress_06, 8;
+		SWrite_Data_B1_06, 16;
+		SWrite_Data_B2_06, 24;
+		SWrite_Data_B3_06, 32;
+		SWrite_Data_B4_06, 40;
+		SWrite_Data_B5_06, 48;
+		SWrite_CRC_06, 56;
+}
+	RGBe_Write_d_07: 41, HCP4_uC1_1, 8 {
+		SWrite_Dummy_07, 0;
+		SWrite_Len_07, 5;
+		SWrite_MemAddress_07, 8;
+		SWrite_Data_B1_07, 16;
+		SWrite_Data_B2_07, 24;
+		SWrite_Data_B3_07, 32;
+		SWrite_Data_B4_07, 40;
+		SWrite_Data_B5_07, 48;
+		SWrite_CRC_07, 56;
+}
+	RGBe_Write_d_08: 42, HCP4_uC1_1, 8 {
+		SWrite_Dummy_08, 0;
+		SWrite_Len_08, 5;
+		SWrite_MemAddress_08, 8;
+		SWrite_Data_B1_08, 16;
+		SWrite_Data_B2_08, 24;
+		SWrite_Data_B3_08, 32;
+		SWrite_Data_B4_08, 40;
+		SWrite_Data_B5_08, 48;
+		SWrite_CRC_08, 56;
+}
+	RGBe_Write_d_09: 43, HCP4_uC1_1, 8 {
+		SWrite_Dummy_09, 0;
+		SWrite_Len_09, 5;
+		SWrite_MemAddress_09, 8;
+		SWrite_Data_B1_09, 16;
+		SWrite_Data_B2_09, 24;
+		SWrite_Data_B3_09, 32;
+		SWrite_Data_B4_09, 40;
+		SWrite_Data_B5_09, 48;
+		SWrite_CRC_09, 56;
+}
+	RGBe_Write_d_10: 44, HCP4_uC1_1, 8 {
+		SWrite_Dummy_10, 0;
+		SWrite_Len_10, 5;
+		SWrite_MemAddress_10, 8;
+		SWrite_Data_B1_10, 16;
+		SWrite_Data_B2_10, 24;
+		SWrite_Data_B3_10, 32;
+		SWrite_Data_B4_10, 40;
+		SWrite_Data_B5_10, 48;
+		SWrite_CRC_10, 56;
+}
+	RGBe_Write_d_11: 45, HCP4_uC1_1, 8 {
+		SWrite_Dummy_11, 0;
+		SWrite_Len_11, 5;
+		SWrite_MemAddress_11, 8;
+		SWrite_Data_B1_11, 16;
+		SWrite_Data_B2_11, 24;
+		SWrite_Data_B3_11, 32;
+		SWrite_Data_B4_11, 40;
+		SWrite_Data_B5_11, 48;
+		SWrite_CRC_11, 56;
+}
+	RGBe_Write_d_12: 46, HCP4_uC1_1, 8 {
+		SWrite_Dummy_12, 0;
+		SWrite_Len_12, 5;
+		SWrite_MemAddress_12, 8;
+		SWrite_Data_B1_12, 16;
+		SWrite_Data_B2_12, 24;
+		SWrite_Data_B3_12, 32;
+		SWrite_Data_B4_12, 40;
+		SWrite_Data_B5_12, 48;
+		SWrite_CRC_12, 56;
+}
+	RGBe_Write_d_13: 47, HCP4_uC1_1, 8 {
+		SWrite_Dummy_13, 0;
+		SWrite_Len_13, 5;
+		SWrite_MemAddress_13, 8;
+		SWrite_Data_B1_13, 16;
+		SWrite_Data_B2_13, 24;
+		SWrite_Data_B3_13, 32;
+		SWrite_Data_B4_13, 40;
+		SWrite_Data_B5_13, 48;
+		SWrite_CRC_13, 56;
+}
+	RGBe_Write_d_14: 48, HCP4_uC1_1, 8 {
+		SWrite_Dummy_14, 0;
+		SWrite_Len_14, 5;
+		SWrite_MemAddress_14, 8;
+		SWrite_Data_B1_14, 16;
+		SWrite_Data_B2_14, 24;
+		SWrite_Data_B3_14, 32;
+		SWrite_Data_B4_14, 40;
+		SWrite_Data_B5_14, 48;
+		SWrite_CRC_14, 56;
+}
+	RGBs_Slave_01d: 1, AM_RGB_Slave_01d, 8 {
+		RGB_Slave_01d_IntError, 0;
+		RGB_Slave_01d_TempState, 4;
+		RGB_Slave_01d_ResponseError, 7;
+		RGB_Slave_01d_HelligkeitsFaktor, 8;
+		RGB_Slave_01d_HW_Version, 16;
+		RGB_Slave_01d_SW_Version, 24;
+		RGB_Slave_01d_StoredNAD, 32;
+		RGB_Slave_01d_Weisspunkt_u, 40;
+		RGB_Slave_01d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_02d: 2, AM_RGB_Slave_02d, 8 {
+		RGB_Slave_02d_IntError, 0;
+		RGB_Slave_02d_TempState, 4;
+		RGB_Slave_02d_ResponseError, 7;
+		RGB_Slave_02d_HelligkeitsFaktor, 8;
+		RGB_Slave_02d_HW_Version, 16;
+		RGB_Slave_02d_SW_Version, 24;
+		RGB_Slave_02d_StoredNAD, 32;
+		RGB_Slave_02d_Weisspunkt_u, 40;
+		RGB_Slave_02d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_03d: 3, AM_RGB_Slave_03d, 8 {
+		RGB_Slave_03d_IntError, 0;
+		RGB_Slave_03d_TempState, 4;
+		RGB_Slave_03d_ResponseError, 7;
+		RGB_Slave_03d_HelligkeitsFaktor, 8;
+		RGB_Slave_03d_HW_Version, 16;
+		RGB_Slave_03d_SW_Version, 24;
+		RGB_Slave_03d_StoredNAD, 32;
+		RGB_Slave_03d_Weisspunkt_u, 40;
+		RGB_Slave_03d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_04d: 4, AM_RGB_Slave_04d, 8 {
+		RGB_Slave_04d_IntError, 0;
+		RGB_Slave_04d_TempState, 4;
+		RGB_Slave_04d_ResponseError, 7;
+		RGB_Slave_04d_HelligkeitsFaktor, 8;
+		RGB_Slave_04d_HW_Version, 16;
+		RGB_Slave_04d_SW_Version, 24;
+		RGB_Slave_04d_StoredNAD, 32;
+		RGB_Slave_04d_Weisspunkt_u, 40;
+		RGB_Slave_04d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_05d: 5, AM_RGB_Slave_05d, 8 {
+		RGB_Slave_05d_IntError, 0;
+		RGB_Slave_05d_TempState, 4;
+		RGB_Slave_05d_ResponseError, 7;
+		RGB_Slave_05d_HelligkeitsFaktor, 8;
+		RGB_Slave_05d_HW_Version, 16;
+		RGB_Slave_05d_SW_Version, 24;
+		RGB_Slave_05d_StoredNAD, 32;
+		RGB_Slave_05d_Weisspunkt_u, 40;
+		RGB_Slave_05d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_06d: 6, AM_RGB_Slave_06d, 8 {
+		RGB_Slave_06d_IntError, 0;
+		RGB_Slave_06d_TempState, 4;
+		RGB_Slave_06d_ResponseError, 7;
+		RGB_Slave_06d_HelligkeitsFaktor, 8;
+		RGB_Slave_06d_HW_Version, 16;
+		RGB_Slave_06d_SW_Version, 24;
+		RGB_Slave_06d_StoredNAD, 32;
+		RGB_Slave_06d_Weisspunkt_u, 40;
+		RGB_Slave_06d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_07d: 7, AM_RGB_Slave_07d, 8 {
+		RGB_Slave_07d_IntError, 0;
+		RGB_Slave_07d_TempState, 4;
+		RGB_Slave_07d_ResponseError, 7;
+		RGB_Slave_07d_HelligkeitsFaktor, 8;
+		RGB_Slave_07d_HW_Version, 16;
+		RGB_Slave_07d_SW_Version, 24;
+		RGB_Slave_07d_StoredNAD, 32;
+		RGB_Slave_07d_Weisspunkt_u, 40;
+		RGB_Slave_07d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_08d: 8, AM_RGB_Slave_08d, 8 {
+		RGB_Slave_08d_IntError, 0;
+		RGB_Slave_08d_TempState, 4;
+		RGB_Slave_08d_ResponseError, 7;
+		RGB_Slave_08d_HelligkeitsFaktor, 8;
+		RGB_Slave_08d_HW_Version, 16;
+		RGB_Slave_08d_SW_Version, 24;
+		RGB_Slave_08d_StoredNAD, 32;
+		RGB_Slave_08d_Weisspunkt_u, 40;
+		RGB_Slave_08d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_09d: 9, AM_RGB_Slave_09d, 8 {
+		RGB_Slave_09d_IntError, 0;
+		RGB_Slave_09d_TempState, 4;
+		RGB_Slave_09d_ResponseError, 7;
+		RGB_Slave_09d_HelligkeitsFaktor, 8;
+		RGB_Slave_09d_HW_Version, 16;
+		RGB_Slave_09d_SW_Version, 24;
+		RGB_Slave_09d_StoredNAD, 32;
+		RGB_Slave_09d_Weisspunkt_u, 40;
+		RGB_Slave_09d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_10d: 10, AM_RGB_Slave_10d, 8 {
+		RGB_Slave_10d_IntError, 0;
+		RGB_Slave_10d_TempState, 4;
+		RGB_Slave_10d_ResponseError, 7;
+		RGB_Slave_10d_HelligkeitsFaktor, 8;
+		RGB_Slave_10d_HW_Version, 16;
+		RGB_Slave_10d_SW_Version, 24;
+		RGB_Slave_10d_StoredNAD, 32;
+		RGB_Slave_10d_Weisspunkt_u, 40;
+		RGB_Slave_10d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_11d: 11, AM_RGB_Slave_11d, 8 {
+		RGB_Slave_11d_IntError, 0;
+		RGB_Slave_11d_TempState, 4;
+		RGB_Slave_11d_ResponseError, 7;
+		RGB_Slave_11d_HelligkeitsFaktor, 8;
+		RGB_Slave_11d_HW_Version, 16;
+		RGB_Slave_11d_SW_Version, 24;
+		RGB_Slave_11d_StoredNAD, 32;
+		RGB_Slave_11d_Weisspunkt_u, 40;
+		RGB_Slave_11d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_12d: 12, AM_RGB_Slave_12d, 8 {
+		RGB_Slave_12d_IntError, 0;
+		RGB_Slave_12d_TempState, 4;
+		RGB_Slave_12d_ResponseError, 7;
+		RGB_Slave_12d_HelligkeitsFaktor, 8;
+		RGB_Slave_12d_HW_Version, 16;
+		RGB_Slave_12d_SW_Version, 24;
+		RGB_Slave_12d_StoredNAD, 32;
+		RGB_Slave_12d_Weisspunkt_u, 40;
+		RGB_Slave_12d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_13d: 13, AM_RGB_Slave_13d, 8 {
+		RGB_Slave_13d_IntError, 0;
+		RGB_Slave_13d_TempState, 4;
+		RGB_Slave_13d_ResponseError, 7;
+		RGB_Slave_13d_HelligkeitsFaktor, 8;
+		RGB_Slave_13d_HW_Version, 16;
+		RGB_Slave_13d_SW_Version, 24;
+		RGB_Slave_13d_StoredNAD, 32;
+		RGB_Slave_13d_Weisspunkt_u, 40;
+		RGB_Slave_13d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_14d: 14, AM_RGB_Slave_14d, 8 {
+		RGB_Slave_14d_IntError, 0;
+		RGB_Slave_14d_TempState, 4;
+		RGB_Slave_14d_ResponseError, 7;
+		RGB_Slave_14d_HelligkeitsFaktor, 8;
+		RGB_Slave_14d_HW_Version, 16;
+		RGB_Slave_14d_SW_Version, 24;
+		RGB_Slave_14d_StoredNAD, 32;
+		RGB_Slave_14d_Weisspunkt_u, 40;
+		RGB_Slave_14d_Weisspunkt_v, 48;
+}
+	RGBs_Slave_16d: 16, Virtual_AM_RGB_Slave_16d, 8 {
+		RGB_Slave_16d_ResponseError, 7;
+}
+}
+Diagnostic_frames {
+	MasterReq: 60 {
+		MasterReqB0, 0;
+		MasterReqB1, 8;
+		MasterReqB2, 16;
+		MasterReqB3, 24;
+		MasterReqB4, 32;
+		MasterReqB5, 40;
+		MasterReqB6, 48;
+		MasterReqB7, 56;
+	}
+	SlaveResp: 61	{
+		SlaveRespB0, 0;
+		SlaveRespB1, 8;
+		SlaveRespB2, 16;
+		SlaveRespB3, 24;
+		SlaveRespB4, 32;
+		SlaveRespB5, 40;
+		SlaveRespB6, 48;
+		SlaveRespB7, 56;
+	}
+}
+Node_attributes {
+	AM_RGB_Slave_01d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x01;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_01d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_01 = 0x4023;
+			RGBs_Slave_01d = 0x4001;
+		}
+	}
+	AM_RGB_Slave_02d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x02;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_02d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_02 = 0x4024;
+			RGBs_Slave_02d = 0x4002;
+		}
+	}
+	AM_RGB_Slave_03d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x03;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_03d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_03 = 0x4025;
+			RGBs_Slave_03d = 0x4003;
+		}
+	}
+	AM_RGB_Slave_04d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x04;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_04d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_04 = 0x4026;
+			RGBs_Slave_04d = 0x4004;
+		}
+	}
+	AM_RGB_Slave_05d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x05;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_05d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_05 = 0x4027;
+			RGBs_Slave_05d = 0x4005;
+		}
+	}
+	AM_RGB_Slave_06d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x06;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_06d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_06 = 0x4028;
+			RGBs_Slave_06d = 0x4006;
+		}
+	}
+	AM_RGB_Slave_07d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x07;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_07d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_07 = 0x4029;
+			RGBs_Slave_07d = 0x4007;
+		}
+	}
+	AM_RGB_Slave_08d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x08;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_08d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_08 = 0x402A;
+			RGBs_Slave_08d = 0x4008;
+		}
+	}
+	AM_RGB_Slave_09d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x09;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_09d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_09 = 0x402B;
+			RGBs_Slave_09d = 0x4009;
+		}
+	}
+	AM_RGB_Slave_10d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x0A;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_10d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_10 = 0x402C;
+			RGBs_Slave_10d = 0x400A;
+		}
+	}
+	AM_RGB_Slave_11d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x0B;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_11d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_11 = 0x402D;
+			RGBs_Slave_11d = 0x400B;
+		}
+	}
+	AM_RGB_Slave_12d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x0C;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_12d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_12 = 0x402E;
+			RGBs_Slave_12d = 0x400C;
+		}
+	}
+	AM_RGB_Slave_13d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x0D;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_13d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_13 = 0x402F;
+			RGBs_Slave_13d = 0x400D;
+		}
+	}
+	AM_RGB_Slave_14d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x0E;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_14d_ResponseError;
+		P2_min = 10 ms;
+		ST_min = 10 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBe_Sync_abcd = 0x401F;
+			RGBe_Write_d_14 = 0x4030;
+			RGBs_Slave_14d = 0x400E;
+		}
+	}
+	Virtual_AM_RGB_Slave_16d {
+		LIN_protocol = 2.0;
+		configured_NAD = 0x10;
+		product_id = 0x0000, 0x0000, 0x00;
+		response_error = RGB_Slave_16d_ResponseError;
+		P2_min = 0 ms;
+		ST_min = 0 ms;
+		configurable_frames {
+			RGBe_Slave_d_01_02 = 0x401A;
+			RGBe_Slave_d_03_04 = 0x401B;
+			RGBe_Slave_d_05_06 = 0x401C;
+			RGBe_Slave_d_07_08 = 0x401D;
+			RGBe_Slave_d_09_10 = 0x401E;
+			RGBe_Slave_d_11_12 = 0x4020;
+			RGBe_Slave_d_13_14 = 0x4021;
+			RGBs_Slave_16d = 0x4010;
+		}
+	}
+}
+Schedule_tables {
+	ST1 {
+		RGBs_Slave_01d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_02d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_03d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_04d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_05d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_06d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_07d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_08d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_09d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_10d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_11d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_12d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_13d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_14d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+		RGBs_Slave_16d delay 10 ms;
+		RGBe_Slave_d_01_02 delay 10 ms;
+		RGBe_Slave_d_03_04 delay 10 ms;
+		RGBe_Slave_d_05_06 delay 10 ms;
+		RGBe_Slave_d_07_08 delay 10 ms;
+		RGBe_Slave_d_09_10 delay 10 ms;
+		RGBe_Slave_d_11_12 delay 10 ms;
+		RGBe_Slave_d_13_14 delay 10 ms;
+	}
+	SWrite {
+		RGBe_Write_d_01 delay 10 ms;
+		RGBe_Write_d_02 delay 10 ms;
+		RGBe_Write_d_03 delay 10 ms;
+		RGBe_Write_d_04 delay 10 ms;
+		RGBe_Write_d_05 delay 10 ms;
+		RGBe_Write_d_06 delay 10 ms;
+		RGBe_Write_d_07 delay 10 ms;
+		RGBe_Write_d_08 delay 10 ms;
+		RGBe_Write_d_09 delay 10 ms;
+		RGBe_Write_d_10 delay 10 ms;
+		RGBe_Write_d_11 delay 10 ms;
+		RGBe_Write_d_12 delay 10 ms;
+		RGBe_Write_d_13 delay 10 ms;
+		RGBe_Write_d_14 delay 10 ms;
+	}
+	Sync_All {
+		RGBe_Sync_abcd delay 10 ms;
+	}
+	DiagRequest {
+		MasterReq delay 10 ms;
+	}
+	DiagResponse {
+		SlaveResp delay 10 ms;
+	}
+}

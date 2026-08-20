@@ -5,321 +5,3125 @@
     "speed": 19200,
     "nodes": {
         "master": {
-            "name": "ESP32_Master",
+            "name": "HCP4_uC1_1",
             "timebase": 0.01,
             "jitter": 0.0009000000000000001,
             "max_header_length": null,
             "response_tolerance": null
         },
         "slaves": [
-            "JOHNSON_Slave"
+            "AM_RGB_Slave_01d",
+            "AM_RGB_Slave_02d",
+            "AM_RGB_Slave_03d",
+            "AM_RGB_Slave_04d",
+            "AM_RGB_Slave_05d",
+            "AM_RGB_Slave_06d",
+            "AM_RGB_Slave_07d",
+            "AM_RGB_Slave_08d",
+            "AM_RGB_Slave_09d",
+            "AM_RGB_Slave_10d",
+            "AM_RGB_Slave_11d",
+            "AM_RGB_Slave_12d",
+            "AM_RGB_Slave_13d",
+            "AM_RGB_Slave_14d",
+            "Virtual_AM_RGB_Slave_16d"
         ]
     },
     "signals": [
         {
-            "name": "ACT_Master_NAD",
-            "width": 8,
-            "init_value": 10,
-            "publisher": "ESP32_Master",
-            "subscribers": [
-                "JOHNSON_Slave"
-            ]
-        },
-        {
-            "name": "ACT_Master_Save_Prog",
-            "width": 2,
+            "name": "BCM_RGB_Color_u_01",
+            "width": 7,
             "init_value": 0,
-            "publisher": "ESP32_Master",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "JOHNSON_Slave"
+                "AM_RGB_Slave_01d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Master_Release_Block",
-            "width": 2,
+            "name": "BCM_RGB_Color_u_02",
+            "width": 7,
             "init_value": 0,
-            "publisher": "ESP32_Master",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "JOHNSON_Slave"
+                "AM_RGB_Slave_02d"
             ]
         },
         {
-            "name": "ACT_Master_Clear_Flags",
-            "width": 4,
+            "name": "BCM_RGB_Color_u_03",
+            "width": 7,
             "init_value": 0,
-            "publisher": "ESP32_Master",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "JOHNSON_Slave"
+                "AM_RGB_Slave_03d"
             ]
         },
         {
-            "name": "ACT_Master_Coil_Holding",
-            "width": 2,
+            "name": "BCM_RGB_Color_u_04",
+            "width": 7,
             "init_value": 0,
-            "publisher": "ESP32_Master",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "JOHNSON_Slave"
+                "AM_RGB_Slave_04d"
             ]
         },
         {
-            "name": "ACT_Master_Select_Position",
-            "width": 2,
+            "name": "BCM_RGB_Color_u_05",
+            "width": 7,
             "init_value": 0,
-            "publisher": "ESP32_Master",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "JOHNSON_Slave"
+                "AM_RGB_Slave_05d"
             ]
         },
         {
-            "name": "ACT_Master_Speed",
-            "width": 4,
-            "init_value": 3,
-            "publisher": "ESP32_Master",
-            "subscribers": [
-                "JOHNSON_Slave"
-            ]
-        },
-        {
-            "name": "ACT_Master_Desired_Position",
-            "width": 16,
+            "name": "BCM_RGB_Color_u_06",
+            "width": 7,
             "init_value": 0,
-            "publisher": "ESP32_Master",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "JOHNSON_Slave"
+                "AM_RGB_Slave_06d"
             ]
         },
         {
-            "name": "ACT_Master_Start_Position",
-            "width": 16,
-            "init_value": 1023,
-            "publisher": "ESP32_Master",
-            "subscribers": [
-                "JOHNSON_Slave"
-            ]
-        },
-        {
-            "name": "ACT_Master_Emergency_Release",
-            "width": 2,
+            "name": "BCM_RGB_Color_u_07",
+            "width": 7,
             "init_value": 0,
-            "publisher": "ESP32_Master",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "JOHNSON_Slave"
+                "AM_RGB_Slave_07d"
             ]
         },
         {
-            "name": "ACT_Master_Emergency_Position",
-            "width": 2,
+            "name": "BCM_RGB_Color_u_08",
+            "width": 7,
             "init_value": 0,
-            "publisher": "ESP32_Master",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "JOHNSON_Slave"
+                "AM_RGB_Slave_08d"
             ]
         },
         {
-            "name": "ACT_Master_Direction",
-            "width": 2,
+            "name": "BCM_RGB_Color_u_09",
+            "width": 7,
             "init_value": 0,
-            "publisher": "ESP32_Master",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "JOHNSON_Slave"
+                "AM_RGB_Slave_09d"
             ]
         },
         {
-            "name": "ACT_Master_Stop_Mode",
-            "width": 2,
+            "name": "BCM_RGB_Color_u_10",
+            "width": 7,
             "init_value": 0,
-            "publisher": "ESP32_Master",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "JOHNSON_Slave"
+                "AM_RGB_Slave_10d"
             ]
         },
         {
-            "name": "ACT_Slave_Response_Error",
+            "name": "BCM_RGB_Color_u_11",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_u_12",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_u_13",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_u_14",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_01",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d",
+                "Virtual_AM_RGB_Slave_16d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_02",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_03",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_04",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_05",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_06",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_07",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_08",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_09",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_10",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_11",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_12",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_13",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Color_v_14",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_01",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d",
+                "Virtual_AM_RGB_Slave_16d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_02",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_03",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_04",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_05",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_06",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_07",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_08",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_09",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_10",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_11",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_12",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_13",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Dimmrampe_14",
+            "width": 6,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_GlobalSync",
             "width": 1,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_01d",
+                "AM_RGB_Slave_02d",
+                "AM_RGB_Slave_03d",
+                "AM_RGB_Slave_04d",
+                "AM_RGB_Slave_05d",
+                "AM_RGB_Slave_06d",
+                "AM_RGB_Slave_07d",
+                "AM_RGB_Slave_08d",
+                "AM_RGB_Slave_09d",
+                "AM_RGB_Slave_10d",
+                "AM_RGB_Slave_11d",
+                "AM_RGB_Slave_12d",
+                "AM_RGB_Slave_13d",
+                "AM_RGB_Slave_14d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Slave_Overtemperature",
-            "width": 2,
+            "name": "BCM_RGB_GlobalSync_01",
+            "width": 1,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_01d",
+                "AM_RGB_Slave_02d",
+                "AM_RGB_Slave_03d",
+                "AM_RGB_Slave_04d",
+                "AM_RGB_Slave_05d",
+                "AM_RGB_Slave_06d",
+                "AM_RGB_Slave_07d",
+                "AM_RGB_Slave_08d",
+                "AM_RGB_Slave_09d",
+                "AM_RGB_Slave_10d",
+                "AM_RGB_Slave_11d",
+                "AM_RGB_Slave_12d",
+                "AM_RGB_Slave_13d",
+                "AM_RGB_Slave_14d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Slave_Electronic_Defect",
-            "width": 2,
+            "name": "BCM_RGB_GlobalSync_03",
+            "width": 1,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_01d",
+                "AM_RGB_Slave_02d",
+                "AM_RGB_Slave_03d",
+                "AM_RGB_Slave_04d",
+                "AM_RGB_Slave_05d",
+                "AM_RGB_Slave_06d",
+                "AM_RGB_Slave_07d",
+                "AM_RGB_Slave_08d",
+                "AM_RGB_Slave_09d",
+                "AM_RGB_Slave_10d",
+                "AM_RGB_Slave_11d",
+                "AM_RGB_Slave_12d",
+                "AM_RGB_Slave_13d",
+                "AM_RGB_Slave_14d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Slave_Suppy_Voltage",
-            "width": 2,
+            "name": "BCM_RGB_GlobalSync_05",
+            "width": 1,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_01d",
+                "AM_RGB_Slave_02d",
+                "AM_RGB_Slave_03d",
+                "AM_RGB_Slave_04d",
+                "AM_RGB_Slave_05d",
+                "AM_RGB_Slave_06d",
+                "AM_RGB_Slave_07d",
+                "AM_RGB_Slave_08d",
+                "AM_RGB_Slave_09d",
+                "AM_RGB_Slave_10d",
+                "AM_RGB_Slave_11d",
+                "AM_RGB_Slave_12d",
+                "AM_RGB_Slave_13d",
+                "AM_RGB_Slave_14d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Slave_Emergency_Run",
-            "width": 2,
+            "name": "BCM_RGB_GlobalSync_07",
+            "width": 1,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_01d",
+                "AM_RGB_Slave_02d",
+                "AM_RGB_Slave_03d",
+                "AM_RGB_Slave_04d",
+                "AM_RGB_Slave_05d",
+                "AM_RGB_Slave_06d",
+                "AM_RGB_Slave_07d",
+                "AM_RGB_Slave_08d",
+                "AM_RGB_Slave_09d",
+                "AM_RGB_Slave_10d",
+                "AM_RGB_Slave_11d",
+                "AM_RGB_Slave_12d",
+                "AM_RGB_Slave_13d",
+                "AM_RGB_Slave_14d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Slave_Release_Block",
-            "width": 2,
+            "name": "BCM_RGB_GlobalSync_09",
+            "width": 1,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_01d",
+                "AM_RGB_Slave_02d",
+                "AM_RGB_Slave_03d",
+                "AM_RGB_Slave_04d",
+                "AM_RGB_Slave_05d",
+                "AM_RGB_Slave_06d",
+                "AM_RGB_Slave_07d",
+                "AM_RGB_Slave_08d",
+                "AM_RGB_Slave_09d",
+                "AM_RGB_Slave_10d",
+                "AM_RGB_Slave_11d",
+                "AM_RGB_Slave_12d",
+                "AM_RGB_Slave_13d",
+                "AM_RGB_Slave_14d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Slave_Block_Detected",
-            "width": 2,
+            "name": "BCM_RGB_GlobalSync_11",
+            "width": 1,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_01d",
+                "AM_RGB_Slave_02d",
+                "AM_RGB_Slave_03d",
+                "AM_RGB_Slave_04d",
+                "AM_RGB_Slave_05d",
+                "AM_RGB_Slave_06d",
+                "AM_RGB_Slave_07d",
+                "AM_RGB_Slave_08d",
+                "AM_RGB_Slave_09d",
+                "AM_RGB_Slave_10d",
+                "AM_RGB_Slave_11d",
+                "AM_RGB_Slave_12d",
+                "AM_RGB_Slave_13d",
+                "AM_RGB_Slave_14d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Slave_Reset",
-            "width": 2,
+            "name": "BCM_RGB_GlobalSync_13",
+            "width": 1,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_01d",
+                "AM_RGB_Slave_02d",
+                "AM_RGB_Slave_03d",
+                "AM_RGB_Slave_04d",
+                "AM_RGB_Slave_05d",
+                "AM_RGB_Slave_06d",
+                "AM_RGB_Slave_07d",
+                "AM_RGB_Slave_08d",
+                "AM_RGB_Slave_09d",
+                "AM_RGB_Slave_10d",
+                "AM_RGB_Slave_11d",
+                "AM_RGB_Slave_12d",
+                "AM_RGB_Slave_13d",
+                "AM_RGB_Slave_14d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Slave_Coil_Holding",
-            "width": 2,
-            "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "name": "BCM_RGB_Intensitaet_01",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_01d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Slave_Position_Status",
-            "width": 2,
-            "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "name": "BCM_RGB_Intensitaet_02",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_02d"
             ]
         },
         {
-            "name": "ACT_Slave_Speed_Status",
+            "name": "BCM_RGB_Intensitaet_03",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_04",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_05",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_06",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_07",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_08",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_09",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_10",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_11",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_12",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_13",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Intensitaet_14",
+            "width": 7,
+            "init_value": 127,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Sonderfunktion_01",
             "width": 4,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_01d",
+                "Virtual_AM_RGB_Slave_16d"
             ]
         },
         {
-            "name": "ACT_Slave_Actual_Position",
-            "width": 16,
+            "name": "BCM_RGB_Sonderfunktion_02",
+            "width": 4,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_02d"
             ]
         },
         {
-            "name": "ACT_Slave_Traverse",
-            "width": 2,
+            "name": "BCM_RGB_Sonderfunktion_03",
+            "width": 4,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_03d"
             ]
         },
         {
-            "name": "ACT_Slave_Holding_Torque",
-            "width": 2,
+            "name": "BCM_RGB_Sonderfunktion_04",
+            "width": 4,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_04d"
             ]
         },
         {
-            "name": "ACT_Slave_Special_Function",
-            "width": 2,
+            "name": "BCM_RGB_Sonderfunktion_05",
+            "width": 4,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "HCP4_uC1_1",
             "subscribers": [
-                "ESP32_Master"
+                "AM_RGB_Slave_05d"
             ]
         },
         {
-            "name": "ACT_Slave_NAD",
+            "name": "BCM_RGB_Sonderfunktion_06",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Sonderfunktion_07",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Sonderfunktion_08",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Sonderfunktion_09",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Sonderfunktion_10",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Sonderfunktion_11",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Sonderfunktion_12",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Sonderfunktion_13",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "BCM_RGB_Sonderfunktion_14",
+            "width": 4,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "RGB_Slave_01d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_01d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_01d_HW_Version",
             "width": 8,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "AM_RGB_Slave_01d",
             "subscribers": [
-                "ESP32_Master"
+                "HCP4_uC1_1"
             ]
         },
         {
-            "name": "ACT_Slave_Emergency_Release",
+            "name": "RGB_Slave_01d_IntError",
             "width": 2,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "AM_RGB_Slave_01d",
             "subscribers": [
-                "ESP32_Master"
+                "HCP4_uC1_1"
             ]
         },
         {
-            "name": "ACT_Slave_Emergency_Position",
-            "width": 2,
+            "name": "RGB_Slave_01d_ResponseError",
+            "width": 1,
             "init_value": 0,
-            "publisher": "JOHNSON_Slave",
+            "publisher": "AM_RGB_Slave_01d",
             "subscribers": [
-                "ESP32_Master"
+                "HCP4_uC1_1"
             ]
         },
         {
-            "name": "ACT_Slave_Direction",
-            "width": 2,
-            "init_value": 0,
-            "publisher": "JOHNSON_Slave",
-            "subscribers": [
-                "ESP32_Master"
-            ]
-        },
-        {
-            "name": "ACT_Slave_Stop_Mode",
-            "width": 2,
-            "init_value": 0,
-            "publisher": "JOHNSON_Slave",
-            "subscribers": [
-                "ESP32_Master"
-            ]
-        },
-        {
-            "name": "ACT_Slave_Test_Signal",
+            "name": "RGB_Slave_01d_StoredNAD",
             "width": 8,
-            "init_value": 12,
-            "publisher": "JOHNSON_Slave",
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_01d",
             "subscribers": [
-                "ESP32_Master"
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_01d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_01d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_01d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_01d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_01d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_01d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_01d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_01d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_02d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_02d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_02d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_02d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_02d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_02d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_02d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_02d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_02d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_02d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_02d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_02d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_02d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_02d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_02d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_02d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_02d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_02d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_03d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_03d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_03d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_03d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_03d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_03d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_03d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_03d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_03d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_03d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_03d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_03d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_03d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_03d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_03d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_03d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_03d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_03d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_04d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_04d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_04d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_04d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_04d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_04d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_04d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_04d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_04d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_04d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_04d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_04d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_04d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_04d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_04d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_04d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_04d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_04d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_05d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_05d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_05d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_05d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_05d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_05d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_05d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_05d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_05d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_05d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_05d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_05d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_05d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_05d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_05d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_05d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_05d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_05d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_06d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_06d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_06d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_06d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_06d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_06d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_06d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_06d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_06d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_06d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_06d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_06d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_06d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_06d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_06d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_06d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_06d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_06d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_07d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_07d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_07d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_07d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_07d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_07d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_07d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_07d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_07d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_07d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_07d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_07d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_07d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_07d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_07d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_07d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_07d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_07d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_08d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_08d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_08d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_08d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_08d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_08d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_08d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_08d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_08d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_08d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_08d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_08d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_08d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_08d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_08d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_08d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_08d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_08d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_09d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_09d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_09d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_09d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_09d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_09d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_09d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_09d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_09d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_09d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_09d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_09d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_09d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_09d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_09d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_09d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_09d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_09d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_10d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_10d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_10d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_10d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_10d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_10d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_10d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_10d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_10d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_10d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_10d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_10d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_10d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_10d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_10d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_10d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_10d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_10d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_11d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_11d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_11d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_11d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_11d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_11d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_11d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_11d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_11d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_11d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_11d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_11d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_11d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_11d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_11d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_11d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_11d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_11d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_12d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_12d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_12d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_12d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_12d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_12d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_12d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_12d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_12d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_12d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_12d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_12d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_12d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_12d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_12d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_12d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_12d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_12d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_13d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_13d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_13d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_13d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_13d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_13d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_13d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_13d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_13d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_13d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_13d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_13d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_13d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_13d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_13d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_13d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_13d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_13d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_14d_HelligkeitsFaktor",
+            "width": 7,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_14d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_14d_HW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_14d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_14d_IntError",
+            "width": 2,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_14d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_14d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_14d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_14d_StoredNAD",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_14d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_14d_SW_Version",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_14d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_14d_TempState",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_14d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_14d_Weisspunkt_u",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_14d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_14d_Weisspunkt_v",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "AM_RGB_Slave_14d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "RGB_Slave_16d_ResponseError",
+            "width": 1,
+            "init_value": 0,
+            "publisher": "Virtual_AM_RGB_Slave_16d",
+            "subscribers": [
+                "HCP4_uC1_1"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_01",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_02",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_03",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_04",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_05",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_06",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_07",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_08",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_09",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_10",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_11",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_12",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_13",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "SWrite_CRC_14",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_01",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_02",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_03",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_04",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_05",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_06",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_07",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_08",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_09",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_10",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_11",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_12",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_13",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B1_14",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_01",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_02",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_03",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_04",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_05",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_06",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_07",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_08",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_09",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_10",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_11",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_12",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_13",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B2_14",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_01",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_02",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_03",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_04",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_05",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_06",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_07",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_08",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_09",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_10",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_11",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_12",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_13",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B3_14",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_01",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_02",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_03",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_04",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_05",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_06",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_07",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_08",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_09",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_10",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_11",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_12",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_13",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B4_14",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_01",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_02",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_03",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_04",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_05",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_06",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_07",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_08",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_09",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_10",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_11",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_12",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_13",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "SWrite_Data_B5_14",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_01",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_02",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_03",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_04",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_05",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_06",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_07",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_08",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_09",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_10",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_11",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_12",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_13",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "SWrite_Dummy_14",
+            "width": 5,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_01",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_02",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_03",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_04",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_05",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_06",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_07",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_08",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_09",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_10",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_11",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_12",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_13",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "SWrite_Len_14",
+            "width": 3,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_01",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_01d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_02",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_02d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_03",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_03d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_04",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_04d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_05",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_05d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_06",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_06d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_07",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_07d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_08",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_08d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_09",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_09d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_10",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_10d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_11",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_11d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_12",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_12d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_13",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_13d"
+            ]
+        },
+        {
+            "name": "SWrite_MemAddress_14",
+            "width": 8,
+            "init_value": 0,
+            "publisher": "HCP4_uC1_1",
+            "subscribers": [
+                "AM_RGB_Slave_14d"
             ]
         }
     ],
@@ -407,162 +3211,1622 @@
     ],
     "frames": [
         {
-            "name": "ACT_Master_Control",
-            "frame_id": 18,
-            "publisher": "ESP32_Master",
+            "name": "RGBe_Slave_d_01_02",
+            "frame_id": 26,
+            "publisher": "HCP4_uC1_1",
             "length": 8,
             "signals": [
                 {
-                    "signal": "ACT_Master_NAD",
+                    "signal": "BCM_RGB_Color_u_01",
                     "offset": 0
                 },
                 {
-                    "signal": "ACT_Master_Save_Prog",
-                    "offset": 8
+                    "signal": "BCM_RGB_Color_v_01",
+                    "offset": 7
                 },
                 {
-                    "signal": "ACT_Master_Release_Block",
-                    "offset": 10
-                },
-                {
-                    "signal": "ACT_Master_Clear_Flags",
-                    "offset": 12
-                },
-                {
-                    "signal": "ACT_Master_Coil_Holding",
-                    "offset": 16
-                },
-                {
-                    "signal": "ACT_Master_Select_Position",
-                    "offset": 18
-                },
-                {
-                    "signal": "ACT_Master_Speed",
-                    "offset": 20
-                },
-                {
-                    "signal": "ACT_Master_Desired_Position",
-                    "offset": 24
-                },
-                {
-                    "signal": "ACT_Master_Start_Position",
-                    "offset": 40
-                },
-                {
-                    "signal": "ACT_Master_Emergency_Release",
-                    "offset": 56
-                },
-                {
-                    "signal": "ACT_Master_Emergency_Position",
-                    "offset": 58
-                },
-                {
-                    "signal": "ACT_Master_Direction",
-                    "offset": 60
-                },
-                {
-                    "signal": "ACT_Master_Stop_Mode",
-                    "offset": 62
-                }
-            ]
-        },
-        {
-            "name": "ACT_Slave_Status",
-            "frame_id": 32,
-            "publisher": "JOHNSON_Slave",
-            "length": 8,
-            "signals": [
-                {
-                    "signal": "ACT_Slave_Response_Error",
-                    "offset": 0
-                },
-                {
-                    "signal": "ACT_Slave_Overtemperature",
-                    "offset": 2
-                },
-                {
-                    "signal": "ACT_Slave_Electronic_Defect",
-                    "offset": 4
-                },
-                {
-                    "signal": "ACT_Slave_Suppy_Voltage",
-                    "offset": 6
-                },
-                {
-                    "signal": "ACT_Slave_Emergency_Run",
-                    "offset": 8
-                },
-                {
-                    "signal": "ACT_Slave_Release_Block",
-                    "offset": 10
-                },
-                {
-                    "signal": "ACT_Slave_Block_Detected",
-                    "offset": 12
-                },
-                {
-                    "signal": "ACT_Slave_Reset",
+                    "signal": "BCM_RGB_Dimmrampe_01",
                     "offset": 14
                 },
                 {
-                    "signal": "ACT_Slave_Coil_Holding",
-                    "offset": 16
-                },
-                {
-                    "signal": "ACT_Slave_Position_Status",
-                    "offset": 18
-                },
-                {
-                    "signal": "ACT_Slave_Speed_Status",
+                    "signal": "BCM_RGB_Sonderfunktion_01",
                     "offset": 20
                 },
                 {
-                    "signal": "ACT_Slave_Actual_Position",
+                    "signal": "BCM_RGB_Intensitaet_01",
                     "offset": 24
                 },
                 {
-                    "signal": "ACT_Slave_Traverse",
-                    "offset": 40
+                    "signal": "BCM_RGB_Color_u_02",
+                    "offset": 32
                 },
                 {
-                    "signal": "ACT_Slave_Holding_Torque",
-                    "offset": 42
+                    "signal": "BCM_RGB_Color_v_02",
+                    "offset": 39
                 },
                 {
-                    "signal": "ACT_Slave_Special_Function",
-                    "offset": 44
+                    "signal": "BCM_RGB_Dimmrampe_02",
+                    "offset": 46
                 },
                 {
-                    "signal": "ACT_Slave_NAD",
-                    "offset": 48
+                    "signal": "BCM_RGB_Sonderfunktion_02",
+                    "offset": 52
                 },
                 {
-                    "signal": "ACT_Slave_Emergency_Release",
+                    "signal": "BCM_RGB_Intensitaet_02",
                     "offset": 56
                 },
                 {
-                    "signal": "ACT_Slave_Emergency_Position",
-                    "offset": 58
-                },
-                {
-                    "signal": "ACT_Slave_Direction",
-                    "offset": 60
-                },
-                {
-                    "signal": "ACT_Slave_Stop_Mode",
-                    "offset": 62
+                    "signal": "BCM_RGB_GlobalSync_01",
+                    "offset": 63
                 }
             ]
         },
         {
-            "name": "ACT_Slave_Status_2",
-            "frame_id": 33,
-            "publisher": "JOHNSON_Slave",
+            "name": "RGBe_Slave_d_03_04",
+            "frame_id": 27,
+            "publisher": "HCP4_uC1_1",
             "length": 8,
             "signals": [
                 {
-                    "signal": "ACT_Slave_Test_Signal",
+                    "signal": "BCM_RGB_Color_u_03",
                     "offset": 0
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_03",
+                    "offset": 7
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_03",
+                    "offset": 14
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_03",
+                    "offset": 20
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_03",
+                    "offset": 24
+                },
+                {
+                    "signal": "BCM_RGB_Color_u_04",
+                    "offset": 32
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_04",
+                    "offset": 39
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_04",
+                    "offset": 46
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_04",
+                    "offset": 52
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_04",
+                    "offset": 56
+                },
+                {
+                    "signal": "BCM_RGB_GlobalSync_03",
+                    "offset": 63
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Slave_d_05_06",
+            "frame_id": 28,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "BCM_RGB_Color_u_05",
+                    "offset": 0
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_05",
+                    "offset": 7
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_05",
+                    "offset": 14
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_05",
+                    "offset": 20
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_05",
+                    "offset": 24
+                },
+                {
+                    "signal": "BCM_RGB_Color_u_06",
+                    "offset": 32
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_06",
+                    "offset": 39
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_06",
+                    "offset": 46
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_06",
+                    "offset": 52
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_06",
+                    "offset": 56
+                },
+                {
+                    "signal": "BCM_RGB_GlobalSync_05",
+                    "offset": 63
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Slave_d_07_08",
+            "frame_id": 29,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "BCM_RGB_Color_u_07",
+                    "offset": 0
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_07",
+                    "offset": 7
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_07",
+                    "offset": 14
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_07",
+                    "offset": 20
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_07",
+                    "offset": 24
+                },
+                {
+                    "signal": "BCM_RGB_Color_u_08",
+                    "offset": 32
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_08",
+                    "offset": 39
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_08",
+                    "offset": 46
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_08",
+                    "offset": 52
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_08",
+                    "offset": 56
+                },
+                {
+                    "signal": "BCM_RGB_GlobalSync_07",
+                    "offset": 63
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Slave_d_09_10",
+            "frame_id": 30,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "BCM_RGB_Color_u_09",
+                    "offset": 0
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_09",
+                    "offset": 7
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_09",
+                    "offset": 14
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_09",
+                    "offset": 20
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_09",
+                    "offset": 24
+                },
+                {
+                    "signal": "BCM_RGB_Color_u_10",
+                    "offset": 32
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_10",
+                    "offset": 39
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_10",
+                    "offset": 46
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_10",
+                    "offset": 52
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_10",
+                    "offset": 56
+                },
+                {
+                    "signal": "BCM_RGB_GlobalSync_09",
+                    "offset": 63
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Slave_d_11_12",
+            "frame_id": 32,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "BCM_RGB_Color_u_11",
+                    "offset": 0
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_11",
+                    "offset": 7
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_11",
+                    "offset": 14
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_11",
+                    "offset": 20
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_11",
+                    "offset": 24
+                },
+                {
+                    "signal": "BCM_RGB_Color_u_12",
+                    "offset": 32
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_12",
+                    "offset": 39
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_12",
+                    "offset": 46
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_12",
+                    "offset": 52
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_12",
+                    "offset": 56
+                },
+                {
+                    "signal": "BCM_RGB_GlobalSync_11",
+                    "offset": 63
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Slave_d_13_14",
+            "frame_id": 33,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "BCM_RGB_Color_u_13",
+                    "offset": 0
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_13",
+                    "offset": 7
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_13",
+                    "offset": 14
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_13",
+                    "offset": 20
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_13",
+                    "offset": 24
+                },
+                {
+                    "signal": "BCM_RGB_Color_u_14",
+                    "offset": 32
+                },
+                {
+                    "signal": "BCM_RGB_Color_v_14",
+                    "offset": 39
+                },
+                {
+                    "signal": "BCM_RGB_Dimmrampe_14",
+                    "offset": 46
+                },
+                {
+                    "signal": "BCM_RGB_Sonderfunktion_14",
+                    "offset": 52
+                },
+                {
+                    "signal": "BCM_RGB_Intensitaet_14",
+                    "offset": 56
+                },
+                {
+                    "signal": "BCM_RGB_GlobalSync_13",
+                    "offset": 63
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Sync_abcd",
+            "frame_id": 31,
+            "publisher": "HCP4_uC1_1",
+            "length": 1,
+            "signals": [
+                {
+                    "signal": "BCM_RGB_GlobalSync",
+                    "offset": 0
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_01",
+            "frame_id": 35,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_01",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_01",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_01",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_01",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_01",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_01",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_01",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_01",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_01",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_02",
+            "frame_id": 36,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_02",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_02",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_02",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_02",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_02",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_02",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_02",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_02",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_02",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_03",
+            "frame_id": 37,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_03",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_03",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_03",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_03",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_03",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_03",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_03",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_03",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_03",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_04",
+            "frame_id": 38,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_04",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_04",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_04",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_04",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_04",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_04",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_04",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_04",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_04",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_05",
+            "frame_id": 39,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_05",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_05",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_05",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_05",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_05",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_05",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_05",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_05",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_05",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_06",
+            "frame_id": 40,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_06",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_06",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_06",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_06",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_06",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_06",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_06",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_06",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_06",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_07",
+            "frame_id": 41,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_07",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_07",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_07",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_07",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_07",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_07",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_07",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_07",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_07",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_08",
+            "frame_id": 42,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_08",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_08",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_08",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_08",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_08",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_08",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_08",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_08",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_08",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_09",
+            "frame_id": 43,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_09",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_09",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_09",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_09",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_09",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_09",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_09",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_09",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_09",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_10",
+            "frame_id": 44,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_10",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_10",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_10",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_10",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_10",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_10",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_10",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_10",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_10",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_11",
+            "frame_id": 45,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_11",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_11",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_11",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_11",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_11",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_11",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_11",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_11",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_11",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_12",
+            "frame_id": 46,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_12",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_12",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_12",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_12",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_12",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_12",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_12",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_12",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_12",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_13",
+            "frame_id": 47,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_13",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_13",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_13",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_13",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_13",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_13",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_13",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_13",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_13",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBe_Write_d_14",
+            "frame_id": 48,
+            "publisher": "HCP4_uC1_1",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "SWrite_Dummy_14",
+                    "offset": 0
+                },
+                {
+                    "signal": "SWrite_Len_14",
+                    "offset": 5
+                },
+                {
+                    "signal": "SWrite_MemAddress_14",
+                    "offset": 8
+                },
+                {
+                    "signal": "SWrite_Data_B1_14",
+                    "offset": 16
+                },
+                {
+                    "signal": "SWrite_Data_B2_14",
+                    "offset": 24
+                },
+                {
+                    "signal": "SWrite_Data_B3_14",
+                    "offset": 32
+                },
+                {
+                    "signal": "SWrite_Data_B4_14",
+                    "offset": 40
+                },
+                {
+                    "signal": "SWrite_Data_B5_14",
+                    "offset": 48
+                },
+                {
+                    "signal": "SWrite_CRC_14",
+                    "offset": 56
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_01d",
+            "frame_id": 1,
+            "publisher": "AM_RGB_Slave_01d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_01d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_01d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_01d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_01d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_01d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_01d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_01d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_01d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_01d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_02d",
+            "frame_id": 2,
+            "publisher": "AM_RGB_Slave_02d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_02d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_02d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_02d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_02d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_02d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_02d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_02d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_02d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_02d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_03d",
+            "frame_id": 3,
+            "publisher": "AM_RGB_Slave_03d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_03d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_03d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_03d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_03d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_03d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_03d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_03d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_03d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_03d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_04d",
+            "frame_id": 4,
+            "publisher": "AM_RGB_Slave_04d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_04d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_04d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_04d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_04d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_04d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_04d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_04d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_04d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_04d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_05d",
+            "frame_id": 5,
+            "publisher": "AM_RGB_Slave_05d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_05d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_05d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_05d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_05d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_05d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_05d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_05d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_05d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_05d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_06d",
+            "frame_id": 6,
+            "publisher": "AM_RGB_Slave_06d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_06d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_06d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_06d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_06d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_06d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_06d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_06d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_06d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_06d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_07d",
+            "frame_id": 7,
+            "publisher": "AM_RGB_Slave_07d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_07d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_07d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_07d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_07d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_07d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_07d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_07d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_07d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_07d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_08d",
+            "frame_id": 8,
+            "publisher": "AM_RGB_Slave_08d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_08d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_08d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_08d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_08d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_08d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_08d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_08d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_08d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_08d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_09d",
+            "frame_id": 9,
+            "publisher": "AM_RGB_Slave_09d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_09d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_09d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_09d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_09d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_09d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_09d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_09d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_09d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_09d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_10d",
+            "frame_id": 10,
+            "publisher": "AM_RGB_Slave_10d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_10d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_10d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_10d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_10d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_10d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_10d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_10d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_10d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_10d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_11d",
+            "frame_id": 11,
+            "publisher": "AM_RGB_Slave_11d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_11d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_11d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_11d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_11d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_11d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_11d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_11d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_11d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_11d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_12d",
+            "frame_id": 12,
+            "publisher": "AM_RGB_Slave_12d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_12d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_12d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_12d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_12d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_12d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_12d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_12d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_12d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_12d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_13d",
+            "frame_id": 13,
+            "publisher": "AM_RGB_Slave_13d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_13d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_13d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_13d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_13d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_13d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_13d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_13d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_13d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_13d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_14d",
+            "frame_id": 14,
+            "publisher": "AM_RGB_Slave_14d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_14d_IntError",
+                    "offset": 0
+                },
+                {
+                    "signal": "RGB_Slave_14d_TempState",
+                    "offset": 4
+                },
+                {
+                    "signal": "RGB_Slave_14d_ResponseError",
+                    "offset": 7
+                },
+                {
+                    "signal": "RGB_Slave_14d_HelligkeitsFaktor",
+                    "offset": 8
+                },
+                {
+                    "signal": "RGB_Slave_14d_HW_Version",
+                    "offset": 16
+                },
+                {
+                    "signal": "RGB_Slave_14d_SW_Version",
+                    "offset": 24
+                },
+                {
+                    "signal": "RGB_Slave_14d_StoredNAD",
+                    "offset": 32
+                },
+                {
+                    "signal": "RGB_Slave_14d_Weisspunkt_u",
+                    "offset": 40
+                },
+                {
+                    "signal": "RGB_Slave_14d_Weisspunkt_v",
+                    "offset": 48
+                }
+            ]
+        },
+        {
+            "name": "RGBs_Slave_16d",
+            "frame_id": 16,
+            "publisher": "Virtual_AM_RGB_Slave_16d",
+            "length": 8,
+            "signals": [
+                {
+                    "signal": "RGB_Slave_16d_ResponseError",
+                    "offset": 7
                 }
             ]
         }
@@ -647,7 +4911,7 @@
     ],
     "node_attributes": [
         {
-            "name": "JOHNSON_Slave",
+            "name": "AM_RGB_Slave_01d",
             "lin_protocol": "2.0",
             "configured_nad": 1,
             "product_id": {
@@ -655,33 +4919,1329 @@
                 "function_id": 0,
                 "variant": 0
             },
-            "response_error": "ACT_Slave_Response_Error",
+            "response_error": "RGB_Slave_01d_ResponseError",
             "P2_min": 0.01,
             "ST_min": 0.01,
             "configurable_frames": {
-                "ACT_Master_Control": 16405,
-                "ACT_Slave_Status": 16385,
-                "ACT_Slave_Status_2": 16386
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_01": 16419,
+                "RGBs_Slave_01d": 16385
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_02d",
+            "lin_protocol": "2.0",
+            "configured_nad": 2,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_02d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_02": 16420,
+                "RGBs_Slave_02d": 16386
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_03d",
+            "lin_protocol": "2.0",
+            "configured_nad": 3,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_03d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_03": 16421,
+                "RGBs_Slave_03d": 16387
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_04d",
+            "lin_protocol": "2.0",
+            "configured_nad": 4,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_04d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_04": 16422,
+                "RGBs_Slave_04d": 16388
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_05d",
+            "lin_protocol": "2.0",
+            "configured_nad": 5,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_05d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_05": 16423,
+                "RGBs_Slave_05d": 16389
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_06d",
+            "lin_protocol": "2.0",
+            "configured_nad": 6,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_06d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_06": 16424,
+                "RGBs_Slave_06d": 16390
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_07d",
+            "lin_protocol": "2.0",
+            "configured_nad": 7,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_07d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_07": 16425,
+                "RGBs_Slave_07d": 16391
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_08d",
+            "lin_protocol": "2.0",
+            "configured_nad": 8,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_08d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_08": 16426,
+                "RGBs_Slave_08d": 16392
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_09d",
+            "lin_protocol": "2.0",
+            "configured_nad": 9,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_09d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_09": 16427,
+                "RGBs_Slave_09d": 16393
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_10d",
+            "lin_protocol": "2.0",
+            "configured_nad": 10,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_10d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_10": 16428,
+                "RGBs_Slave_10d": 16394
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_11d",
+            "lin_protocol": "2.0",
+            "configured_nad": 11,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_11d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_11": 16429,
+                "RGBs_Slave_11d": 16395
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_12d",
+            "lin_protocol": "2.0",
+            "configured_nad": 12,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_12d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_12": 16430,
+                "RGBs_Slave_12d": 16396
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_13d",
+            "lin_protocol": "2.0",
+            "configured_nad": 13,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_13d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_13": 16431,
+                "RGBs_Slave_13d": 16397
+            }
+        },
+        {
+            "name": "AM_RGB_Slave_14d",
+            "lin_protocol": "2.0",
+            "configured_nad": 14,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_14d_ResponseError",
+            "P2_min": 0.01,
+            "ST_min": 0.01,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBe_Sync_abcd": 16415,
+                "RGBe_Write_d_14": 16432,
+                "RGBs_Slave_14d": 16398
+            }
+        },
+        {
+            "name": "Virtual_AM_RGB_Slave_16d",
+            "lin_protocol": "2.0",
+            "configured_nad": 16,
+            "product_id": {
+                "supplier_id": 0,
+                "function_id": 0,
+                "variant": 0
+            },
+            "response_error": "RGB_Slave_16d_ResponseError",
+            "P2_min": 0.0,
+            "ST_min": 0.0,
+            "configurable_frames": {
+                "RGBe_Slave_d_01_02": 16410,
+                "RGBe_Slave_d_03_04": 16411,
+                "RGBe_Slave_d_05_06": 16412,
+                "RGBe_Slave_d_07_08": 16413,
+                "RGBe_Slave_d_09_10": 16414,
+                "RGBe_Slave_d_11_12": 16416,
+                "RGBe_Slave_d_13_14": 16417,
+                "RGBs_Slave_16d": 16400
             }
         }
     ],
     "schedule_tables": [
         {
-            "name": "FrameReq_Resp",
+            "name": "ST1",
             "schedule": [
                 {
                     "command": {
                         "type": "frame",
-                        "frame": "ACT_Master_Control"
+                        "frame": "RGBs_Slave_01d"
                     },
-                    "delay": 0.05
+                    "delay": 0.01
                 },
                 {
                     "command": {
                         "type": "frame",
-                        "frame": "ACT_Slave_Status"
+                        "frame": "RGBe_Slave_d_01_02"
                     },
-                    "delay": 0.1
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_02d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_03d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_04d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_05d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_06d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_07d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_08d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_09d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_10d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_11d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_12d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_13d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_14d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBs_Slave_16d"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_01_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_03_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_05_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_07_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_09_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_11_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Slave_d_13_14"
+                    },
+                    "delay": 0.01
+                }
+            ]
+        },
+        {
+            "name": "SWrite",
+            "schedule": [
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_01"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_02"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_03"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_04"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_05"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_06"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_07"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_08"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_09"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_10"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_11"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_12"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_13"
+                    },
+                    "delay": 0.01
+                },
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Write_d_14"
+                    },
+                    "delay": 0.01
+                }
+            ]
+        },
+        {
+            "name": "Sync_All",
+            "schedule": [
+                {
+                    "command": {
+                        "type": "frame",
+                        "frame": "RGBe_Sync_abcd"
+                    },
+                    "delay": 0.01
                 }
             ]
         },
@@ -704,23 +6264,6 @@
                         "type": "slave_response"
                     },
                     "delay": 0.01
-                }
-            ]
-        },
-        {
-            "name": "DiagBoth",
-            "schedule": [
-                {
-                    "command": {
-                        "type": "master_request"
-                    },
-                    "delay": 0.02
-                },
-                {
-                    "command": {
-                        "type": "slave_response"
-                    },
-                    "delay": 0.02
                 }
             ]
         }

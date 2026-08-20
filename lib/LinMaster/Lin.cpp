@@ -152,61 +152,38 @@ void Lin::sendFrame(uint8_t id, uint8_t *data, uint8_t length) {
     _lastDataOnBus = millis();
 }
 
-bool Lin::receiveResponse(uint8_t id, uint8_t *data, uint64_t timeoutMs){
-    while(millis() - _lastDataOnBus < 5)delay(1);
+// Empfängt genau einen 8-Byte LIN-Response-Frame (+ Checksumme).
+// true wenn 8 Datenbytes + gültige Checksumme empfangen wurden.
+bool Lin::receiveResponse(uint8_t id, uint8_t *frame, uint64_t timeoutMs) {
+    while (millis() - _lastDataOnBus < 5) delay(1);
     sendHeader(id);
 
     uint64_t start = millis();
-    uint8_t length = 8;
+    int idx = 0;
 
-    // Warten auf mindestens 1 Byte (min Datenlänge)
-    while (!_config.serial.available()) {
-        if (millis() - start > timeoutMs){
-            _lastDataOnBus = millis();
-            return false; // Timeout
-        } 
-        delay(1);
-    }
-
-    // LIN Daten empfangen - bis max 8 Bytes + 1 Checksumme
-    // Einfache Variante: wir wissen nicht die Länge vorab, müssen also evtl. vorher Länge angeben
-    // Für Demo nehmen wir z.B. max 8 Datenbytes + 1 Checksumme = 9 Bytes max
-    unsigned int timeout = 0;
-    // Versuche, 9 Bytes vom Bus zu lesen
-    for (int i = 0; i < 9; i++)
-    {
-        timeout = 0;
-        while (!Serial2.available())
-        {
-            delay(1);
-            timeout++;
-            if (timeout > TIMEOUT_MILLISECONDS)
-            {
-                goto done;
+    while (idx < 9) {                       // 8 Datenbytes + 1 Checksumme
+        if (_config.serial.available()) {
+            uint8_t b = _config.serial.read();
+            if (idx < 8) {
+                frame[idx] = b;
+            } else {                         // Checksumme
+                _lastDataOnBus = millis();
+                return (calculateChecksum(id, frame, 8) == b);
             }
+            idx++;
+            start = millis();                // Inter-Byte-Timeout zurücksetzen
+        } else {
+            if (millis() - start > timeoutMs) {
+                _lastDataOnBus = millis();
+                return false;                // Timeout
+            }
+            delay(1);
         }
-
-        data[i] = Serial2.read();
     }
-
-    done:
     _lastDataOnBus = millis();
-    if (length < 2) return false; // Mindestens 1 Datenbyte + 1 Checksumme erwartet
-
-    uint8_t dataLength = 8;
-    uint8_t checksumReceived = data[8];
-
-    // Checksumme berechnen
-    uint8_t checksumCalc = calculateChecksum(id, data, dataLength);
-   
-    if (checksumCalc != checksumReceived) {
-        return false; // Checksumme falsch
-    }
-
-    length = dataLength; // Länge nur der Daten zurückgeben
-
-    return true;
+    return false;
 }
+
 
 uint8_t Lin::calculateChecksum(uint8_t id, uint8_t *data, uint8_t length) {
 
@@ -385,39 +362,110 @@ LinResponseType Lin::AssignFrameIDRange(uint8_t nad, uint8_t fid1, uint8_t fid2)
     return response.type;
 }
 
+#define LIN_DIAG_RESPONSE_ID  0x3D
+#define MAX_PENDING           10
+
 LinResponseResult Lin::CheckResponse(uint8_t sid) {
-    LinResponseResult result = { TimeoutResponse, {0} };
-    int count = 0;
-    uint8_t databuffer[9];
+    LinResponseResult result = { TimeoutResponse, {0}, 0, 0 };
+
+    uint8_t  frame[8];
+    uint16_t totalLen   = 0;   // Nutzdatenlänge laut First Frame
+    uint16_t collected  = 0;   // bereits eingesammelte Nutzbytes
+    uint8_t  expectedSN = 1;
+    int      pendingCnt = 0;
+    bool     multiFrame = false;
 
     while (true) {
-        receiveResponse(0x3D, databuffer, 200);
-
-        memcpy(result.data, databuffer, sizeof(databuffer-1));       
-
-        if (databuffer[1] == 0x01 && databuffer[2] == (sid + 0x40)) {
-            result.type = PositiveResponse;            
+        if (!receiveResponse(LIN_DIAG_RESPONSE_ID, frame, 200)) {
+            result.type = TimeoutResponse;
             return result;
-        } 
-        else if (databuffer[1] == 0x03 && databuffer[4] == 0x12) {
-            result.type = NegativeResponse;
-            return result;
-        } 
-        else if (databuffer[1] == 0x03 && databuffer[4] == 0x78) {
-            count++;
-            delay(10);
-            if (count > 5) {
-                result.type = PendingResponse;
-                return result;
+        }
+
+        // kompletten Frame roh ablegen (NAD + PCI + Daten)
+        if (result.length + 8 <= sizeof(result.data)) {
+            memcpy(&result.data[result.length], frame, 8);
+            result.length += 8;
+            result.frameCount++;
+        }
+
+        uint8_t pciType = frame[1] & 0xF0;
+
+        // ---------- Single Frame ----------
+        if (pciType == 0x00) {
+            uint8_t respSid = frame[2];
+            if (respSid == 0x7F) {                       // Negative Response
+                uint8_t nrc = frame[4];
+                if (nrc == 0x78) {                       // responsePending
+                    if (++pendingCnt <= MAX_PENDING) { delay(10); continue; }
+                    result.type = PendingResponse;
+                } else {
+                    result.type = NegativeResponse;
+                }
+            } else if (respSid == (sid + 0x40) || respSid == 0xF2) {
+                result.type = PositiveResponse;
+            } else {
+                result.type = TimeoutResponse;           // unerwartet
             }
-        }else if(result.data[2] == (0xF2)){
-            result.type = PositiveResponse;
             return result;
-        }else{
-            result.type = TimeoutResponse;          
-            return result;            
+        }
+
+        // ---------- First Frame ----------
+        else if (pciType == 0x10) {
+            multiFrame = true;
+            totalLen   = ((uint16_t)(frame[1] & 0x0F) << 8) | frame[2];
+            collected  = 5;                              // FF trägt 5 Nutzbytes (frame[3..7])
+            expectedSN = 1;
+
+            uint8_t respSid = frame[3];                  // SID steht hier ein Byte später!
+            if (respSid == (sid + 0x40) || respSid == 0xF2) result.type = PositiveResponse;
+            else if (respSid == 0x7F)                        result.type = NegativeResponse;
+
+            if (collected >= totalLen) return result;
+            continue;                                    // CFs abholen
+        }
+
+        // ---------- Consecutive Frame ----------
+        else if (pciType == 0x20) {
+            uint8_t sn = frame[1] & 0x0F;
+            // optional: Reihenfolge prüfen
+            // if (sn != expectedSN) { result.type = TimeoutResponse; return result; }
+            expectedSN = (expectedSN + 1) & 0x0F;
+            collected += 6;                              // CF trägt 6 Nutzbytes
+
+            if (multiFrame && collected >= totalLen) return result;  // vollständig
+            continue;
+        }
+
+        else {
+            result.type = TimeoutResponse;
+            return result;
         }
     }
 }
 
 
+// Extrahiert die reinen Nutzdaten (ohne NAD/PCI). Rückgabe = Anzahl Bytes.
+uint16_t Lin::extractPayload(const LinResponseResult &res, uint8_t *out) {
+    if (res.frameCount == 0) return 0;
+    const uint8_t *f0 = &res.data[0];
+    uint8_t pciType = f0[1] & 0xF0;
+
+    if (pciType == 0x00) {                    // Single Frame
+        uint8_t len = f0[1] & 0x0F;
+        memcpy(out, &f0[2], len);
+        return len;
+    }
+    else if (pciType == 0x10) {               // First + Consecutive
+        uint16_t total = ((uint16_t)(f0[1] & 0x0F) << 8) | f0[2];
+        memcpy(out, &f0[3], 5);
+        uint16_t outLen = 5;
+        for (uint8_t i = 1; i < res.frameCount && outLen < total; i++) {
+            const uint8_t *f = &res.data[i * 8];
+            uint16_t take = min((uint16_t)6, (uint16_t)(total - outLen));
+            memcpy(&out[outLen], &f[2], take);
+            outLen += take;
+        }
+        return total;
+    }
+    return 0;
+}

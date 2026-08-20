@@ -9,3 +9,6 @@ Lin::Config linConfig(
 );
 
 Lin lin(linConfig);
+
+bool activateScheduler = true;
+bool frameSent = true; 

@@ -16,7 +16,9 @@ enum LinResponseType {
 
 typedef struct {
     LinResponseType type;
-    uint8_t data[8];
+    uint8_t data[256];
+    uint16_t length;
+    uint8_t frameCount;
 } LinResponseResult;
 
 

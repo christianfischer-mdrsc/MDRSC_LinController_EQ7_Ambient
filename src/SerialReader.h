@@ -12,8 +12,5 @@
 void ReadSerialInput();
 
 void OperateSerialCommands(String cmd);
-void setSignalsForClear(LinSignals_t* sig);
-void setSignalsForSetPosition(LinSignals_t* sig);
-void setSignalsForGoPosition(LinSignals_t* sig);
 
 #endif

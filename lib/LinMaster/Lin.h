@@ -33,6 +33,8 @@ class Lin {
         void sendHeader(uint8_t id);
         void sendFrame(uint8_t id, uint8_t *data, uint8_t length);
         bool receiveResponse(uint8_t id, uint8_t *data, uint64_t timeoutMs = 100);
+        bool receiveMultiResponse(uint8_t id, uint8_t *data, uint64_t timeoutMs = 100);
+        uint16_t extractPayload(const LinResponseResult &res, uint8_t *out);
         uint8_t calculateChecksum(uint8_t id, uint8_t *data, uint8_t length);
         uint8_t calculatePID(uint8_t id);
 

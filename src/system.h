@@ -11,7 +11,7 @@
 #define BUILD_DATE __DATE__
 #define BUILD_TIME __TIME__
 #define IDENTITY "LIN CAN Controller"
-#define PROJECT "Kulisse"
+#define PROJECT "EQ7 Ambient Controll"
 
 extern int myID;
 

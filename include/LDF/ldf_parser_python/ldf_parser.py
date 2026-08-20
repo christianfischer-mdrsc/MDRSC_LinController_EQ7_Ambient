@@ -5,7 +5,7 @@ from parse_signals_to_struct import generate_signal_struct, generate_signal_cpp,
 from parse_signals_to_serial import generate_signal_serial_cpp, generate_signal_serial_h
 
 # === Pfade ===
-ldf_path                = "include/LDF/Actuator.ldf"
+ldf_path                = "include/LDF/EQ7_KMatrix.ldf"
 
 ldf_file_name = os.path.basename(ldf_path)
 

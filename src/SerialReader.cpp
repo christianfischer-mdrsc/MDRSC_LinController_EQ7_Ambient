@@ -94,8 +94,13 @@ void OperateSerialCommands(String cmd)
 
         // Schritt 3: Frame senden
         uint8_t ID = values[0];
-        uint8_t data[8];
+        uint8_t data[256];
         memcpy(data, &values[1], 8);
+
+        while(!frameSent){
+            delay(1);
+        }
+        activateScheduler = false; // Scheduler deaktivieren, um Konflikte zu vermeiden
 
         lin.sendFrame(ID, data, 8);
         delay(10);
@@ -107,121 +112,48 @@ void OperateSerialCommands(String cmd)
             }
             Serial.println();
             LinResponseResult res = lin.CheckResponse(data[2]);
-            if (res.type == PositiveResponse) {
-                Serial.print("Positive Response: ");
-                for (int i = 0; i < 8; i++) {
-                    Serial.printf("0x%02X ", res.data[i]);
+
+            // --- Rohframes ausgeben ---
+            Serial.printf("Response type: %d, Frames: %d\n", res.type, res.frameCount);
+
+            for (uint8_t f = 0; f < res.frameCount; f++) {
+                Serial.printf("Frame %d: ", f);
+                for (uint8_t b = 0; b < 8; b++) {
+                    Serial.printf("0x%02X ", res.data[f * 8 + b]);
                 }
                 Serial.println();
-            } else if (res.type == NegativeResponse) {
-                Serial.println("Negative Response");
-            } else if (res.type == PendingResponse) {
-                Serial.println("Pending Response");
-            } else if (res.type == TimeoutResponse){
-                Serial.println("Timeout/Error");
-            }else{
-                Serial.println("Response undefined Error");
             }
+
         }
+        activateScheduler = true; // Scheduler wieder aktivieren
     }
+    else if(cmd.startsWith("readIdent:"))
+    {
+        /* syntax: readIdent:<NAD> */
+        String args = cmd.substring(strlen("readIdent:"));
 
-    if(cmd.startsWith("act_init")){
-        uint8_t nad = 0x01;
-        uint8_t count = 1;
-        uint8_t controlID = 0x10;
-        uint8_t statusID = 0x12;
-        lin.AutoAdress(&nad, count);
+        args.trim();
+        uint8_t nad = (uint8_t) strtol(args.c_str(), NULL, 16);
+        while(!frameSent){
+            delay(1);
+        }
+        activateScheduler = false; // Scheduler deaktivieren, um Konflikte zu vermeiden
         delay(10);
-        Serial.printf("Auto Addressing: NAD 0x%02X\n", nad);
-
-        lin.AssignFrameIDRange(nad, 0x12, 0x20);
+        uint8_t data[8] = {nad, 0x06, 0xB4, 0xA0, 0x40, 0x08, 0x1A, 0xFF};
+        lin.sendFrame(0x3C, data, 8);
         delay(10);
-        Serial.println("Assigned Frame IDs (Control)0x01 and (Status)0x10");
-    }
-    else if(cmd.startsWith("act_move_ccw")){
-        // Signale in Frame mappen
-        signals.ACT_Master_NAD.data = 0x01;
-        setSignalsForClear(&signals);
-        FrameReq_Resp_table[0].linFrame.callback(&FrameReq_Resp_table[0].linFrame);
-        lin.sendFrame(FrameReq_Resp_table[0].linFrame.u8_idField, FrameReq_Resp_table[0].linFrame.u8_dataptr, 8);
-        FrameReq_Resp_table[0].sent = true;
+        
+        LinResponseResult res = lin.CheckResponse(0xB4);
 
-        delay(20);
-        setSignalsForSetPosition(&signals);
-        signals.ACT_Master_Start_Position.data = 0;
-        FrameReq_Resp_table[0].linFrame.callback(&FrameReq_Resp_table[0].linFrame);
-        lin.sendFrame(FrameReq_Resp_table[0].linFrame.u8_idField, FrameReq_Resp_table[0].linFrame.u8_dataptr, 8);
-        FrameReq_Resp_table[0].sent = true;
+        uint8_t payload[256];
+        uint16_t len = lin.extractPayload(res, payload);
+        Serial.printf("RGB_Ident:");
+        for (uint16_t i = 0; i < len; i++) {
+            Serial.printf("0x%02X:", payload[i]);
+        }
+        Serial.println();
 
-        delay(20);
-        setSignalsForGoPosition(&signals);
-        signals.ACT_Master_Desired_Position.data = 1000;
-        FrameReq_Resp_table[0].linFrame.callback(&FrameReq_Resp_table[0].linFrame);
-        lin.sendFrame(FrameReq_Resp_table[0].linFrame.u8_idField, FrameReq_Resp_table[0].linFrame.u8_dataptr, 8);
-        FrameReq_Resp_table[0].sent = true;
-        signals.ACT_Master_Select_Position.data = 0x2;
-
-    }else if(cmd.startsWith("act_move_cw")){
-        // Signale in Frame mappen
-        signals.ACT_Master_NAD.data = 0x01;
-        setSignalsForClear(&signals);
-        FrameReq_Resp_table[0].linFrame.callback(&FrameReq_Resp_table[0].linFrame);
-        lin.sendFrame(FrameReq_Resp_table[0].linFrame.u8_idField, FrameReq_Resp_table[0].linFrame.u8_dataptr, 8);
-        FrameReq_Resp_table[0].sent = true;
-
-        delay(20);
-        setSignalsForSetPosition(&signals);
-        signals.ACT_Master_Start_Position.data = 1000;
-        FrameReq_Resp_table[0].linFrame.callback(&FrameReq_Resp_table[0].linFrame);
-        lin.sendFrame(FrameReq_Resp_table[0].linFrame.u8_idField, FrameReq_Resp_table[0].linFrame.u8_dataptr, 8);
-        FrameReq_Resp_table[0].sent = true;
-
-        delay(20);
-        setSignalsForGoPosition(&signals);
-        signals.ACT_Master_Desired_Position.data = 0;
-        FrameReq_Resp_table[0].linFrame.callback(&FrameReq_Resp_table[0].linFrame);
-        lin.sendFrame(FrameReq_Resp_table[0].linFrame.u8_idField, FrameReq_Resp_table[0].linFrame.u8_dataptr, 8);
-        FrameReq_Resp_table[0].sent = true;
-        signals.ACT_Master_Select_Position.data = 0x2;
-
+        activateScheduler = true;
     }
 }
 
-
-void setSignalsForClear(LinSignals_t* sig)
-{
-    sig->ACT_Master_Save_Prog.data = 0x00;
-    sig->ACT_Master_Clear_Flags.data = 0x0E; 
-    sig->ACT_Master_Release_Block.data = 0x01;
-    sig->ACT_Master_Coil_Holding.data = 0x00;
-    sig->ACT_Master_Select_Position.data = 0x02;
-    sig->ACT_Master_Emergency_Release.data = 0x3;
-    sig->ACT_Master_Emergency_Position.data = 0x03;
-    sig->ACT_Master_Direction.data = 0x03;
-    sig->ACT_Master_Stop_Mode.data = 0x01;
-
-}
-void setSignalsForSetPosition(LinSignals_t* sig)
-{
-    sig->ACT_Master_Save_Prog.data = 0x00;
-    sig->ACT_Master_Clear_Flags.data = 0x00; 
-    sig->ACT_Master_Release_Block.data = 0x01;
-    sig->ACT_Master_Coil_Holding.data = 0x00;
-    sig->ACT_Master_Select_Position.data = 0x01;
-    sig->ACT_Master_Emergency_Release.data = 0x3;
-    sig->ACT_Master_Emergency_Position.data = 0x03;
-    sig->ACT_Master_Direction.data = 0x03;
-    sig->ACT_Master_Stop_Mode.data = 0x00;
-}
-void setSignalsForGoPosition(LinSignals_t* sig)
-{
-    sig->ACT_Master_Save_Prog.data = 0x00;
-    sig->ACT_Master_Clear_Flags.data = 0x00; 
-    sig->ACT_Master_Release_Block.data = 0x01;
-    sig->ACT_Master_Coil_Holding.data = 0x00;
-    sig->ACT_Master_Select_Position.data = 0x00;
-    sig->ACT_Master_Emergency_Release.data = 0x3;
-    sig->ACT_Master_Emergency_Position.data = 0x03;
-    sig->ACT_Master_Direction.data = 0x03;
-    sig->ACT_Master_Stop_Mode.data = 0x00;
-}

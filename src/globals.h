@@ -8,6 +8,8 @@
 #define ECHO_PIN GPIO_NUM_27
 
 extern Lin lin;
+extern bool activateScheduler;
+extern bool frameSent;
 
 #endif
 
